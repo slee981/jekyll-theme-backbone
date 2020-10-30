@@ -36,6 +36,10 @@ Or install it yourself as:
 
 ## Usage
 
+### Homepage
+
+You can create a homepage for your blog by setting `layout: home` in your `index.html`.
+
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at [https://github.com/sziv2p/jekyll-theme-scaffold](https://github.com/sziv2p/jekyll-theme-scaffold). This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
