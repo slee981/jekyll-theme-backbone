@@ -36,6 +36,12 @@ Or install it yourself as:
 
 ## Usage
 
+### Global Configuration
+
+| Variable | Type | Default | Specification |
+| -------- | ---- | ------- | ------------- |
+| `lang` | String | `en` | The language of pages; The value can be overwritten by the `lang` variable on each page |
+
 ### Homepage
 
 You can create a homepage for your blog by setting `layout: home` in your `index.html`.
