@@ -12,6 +12,8 @@ Scaffold is empirical. Standing on it, you -- the blogger -- can build a great b
 
 ## Features (Not a Complete List)
 
+- [Open Color](https://yeun.github.io/open-color/)
+
 ## Installation
 
 Add this line to your Jekyll site's `Gemfile`:
