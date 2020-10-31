@@ -1,0 +1,15 @@
+<header class="masthead">
+  <a class="masthead-title" href="{{ '/' | relative_url }}" title="Home">{{ site.title }}</a>
+  <small class="masthead-tagline">{{ site.tagline }}</small>
+  {% if site.data.navigation %}
+    <nav class="nav">
+      <ul class="nav-list">
+      {%- for item in site.data.navigation -%}
+        <li class="nav-item">
+          <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
+        </li>
+      {%- endfor -%}
+      </ul>
+    </nav>
+  {% endif %}
+</header>

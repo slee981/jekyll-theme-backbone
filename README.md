@@ -45,11 +45,24 @@ Or install it yourself as:
 
 | Variable | Type | Default | Specification |
 | -------- | ---- | ------- | ------------- |
+| `title` | String | --- | The title of the website |
+| `tagline` | String | --- | The tagline of the website |
 | `lang` | String | `en` | The language of pages; The value can be overwritten by the `lang` variable on each page |
 
 ### Homepage
 
 You can create a homepage for your blog by setting `layout: home` in your `index.html`.
+
+### Navigation
+
+You can configure the navigation of the website by creating a file `_data/navigation.yml` in your repository, and put some data such as below into it.
+
+```yml
+- title: About
+  url: /about/
+- title: Archive
+  url: /archive/
+```
 
 ## Contributing
 

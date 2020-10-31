@@ -1,0 +1,47 @@
+.masthead {
+  padding: var(--spacer) 0;
+  margin-bottom: var(--spacer-3);
+}
+
+.masthead-title {
+  font-size: 150%;
+  font-weight: bold;
+  color: var(--heading-color);
+
+  &:hover,
+  &:focus {
+    color: var(--heading-color);
+    text-decoration: none;
+  }
+}
+
+.masthead-tagline {
+  color: var(--body-color-light);
+}
+
+.nav {
+  margin-top: var(--spacer);
+}
+.nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.nav-item {
+  display: inline-block;
+  margin-right: 1em;
+
+  &:before {
+    content: "/";
+  }
+
+  a {
+    color: inherit;
+
+    &:hover,
+    &:focus {
+      color: var(--link-hover-color);
+      text-decoration: none;
+    }
+  }
+}
