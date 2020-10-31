@@ -1,3 +1,8 @@
+/**
+ * Global Variables
+ * ================
+ */
+
 /*  Screen sizes
  *  ─────────────────────────────────── */
 
@@ -6,12 +11,33 @@ $md-screen: 48rem;
 $lg-screen: 64rem;
 $xl-screen: 80rem;
 
-:root {
+/*  Root variables
+ *  ─────────────────────────────────── */
 
+:root {
+  --body-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+  --body-font-size: 16px;
+  --body-line-height: 1.5;
+
+  /*  Colors
+   *  ─────────────────────────────────── */
+  
+  --body-color: var(--oc-gray-8);
+  --body-bg: var(--oc-white);
+
+  --link-color: var(--oc-blue-6);
+  --link-hover-color: var(--oc-blue-8);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    
+    /*  Colors
+     *  ─────────────────────────────────── */
+  
+    --body-color: var(--oc-gray-1);
+    --body-bg: var(--oc-gray-9);
+
+    --link-color: var(--oc-cyan-3);
+    --link-hover-color: var(--oc-cyan-1);
   }
 }
