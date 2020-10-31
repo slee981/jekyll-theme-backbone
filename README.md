@@ -12,6 +12,7 @@ Scaffold is empirical. Standing on it, you -- the blogger -- can build a great b
 
 ## Features (Not a Complete List)
 
+- [Normalize.css](http://necolas.github.io/normalize.css/)
 - [Open Color](https://yeun.github.io/open-color/)
 - Dark mode, via [`prefers-color-scheme`](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme)
 
