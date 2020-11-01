@@ -48,6 +48,8 @@ Or install it yourself as:
 | `title` | String | --- | The title of the website |
 | `tagline` | String | --- | The tagline of the website |
 | `lang` | String | `en` | The language of pages; The value can be overwritten by the `lang` variable on each page |
+| `author.name` | String | --- | The name of the website author |
+| `author.url` | String | --- | A URL of the website author |
 
 ### Homepage
 
@@ -63,6 +65,24 @@ You can configure the navigation of the website by creating a file `_data/naviga
 - title: Archive
   url: /archive/
 ```
+
+### Social Links
+
+Scaffold allows you to show social links on the website, all you need to do is creating a file `_data/social.yml`, for example,
+
+```yml
+- title: Email
+  url: mailto:sziv2p@gmail.com
+  icon: fas fa-envelope
+- title: Twitter
+  url: https://twitter.com/sziv2p
+  icon: fab fa-twitter
+- title: GitHub
+  url: https://github.com/sziv2p
+  icon: fab fa-github
+```
+
+The `icon` property means a [Font Awesome](https://fontawesome.com/) class, and you can select any one you like.
 
 ## Contributing
 

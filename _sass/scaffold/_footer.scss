@@ -1,0 +1,29 @@
+.footer {
+  margin: var(--spacer-3) 0;
+}
+
+.social-icons {
+  list-style: none;
+  padding: 0;
+  height: calc(var(--body-line-height) * var(--body-font-size));
+}
+.social-icon-item {
+  float: left;
+  margin-right: var(--spacer);
+}
+.social-icon {
+  color: inherit;
+}
+
+@media (min-width: $md-screen) {
+  .footer {
+    display: flex;
+  }
+  .footer-column {
+    width: 100%;
+  }
+
+  .social-icons {
+    margin: 0;
+  }
+}
