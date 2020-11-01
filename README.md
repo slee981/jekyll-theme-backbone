@@ -1,4 +1,4 @@
-# Scaffold
+# Scaffold <!-- omit in toc -->
 
 Scaffold is a *one-column minimalist Jekyll theme for bloggers*.
 
@@ -10,7 +10,7 @@ So is the target of the Jekyll theme Scaffold. It doesn't need to be modern, pow
 
 Scaffold is empirical. Standing on it, you -- the blogger -- can build a great building based on your words.
 
-## Features (Not a Complete List)
+## Features (Not a Complete List) <!-- omit in toc -->
 
 - [Normalize.css](http://necolas.github.io/normalize.css/)
 - [Open Color](https://yeun.github.io/open-color/)
@@ -20,6 +20,21 @@ Scaffold is empirical. Standing on it, you -- the blogger -- can build a great b
 - [Jekyll Feed](https://github.com/jekyll/jekyll-feed/)
 - [Jekyll SEO Tag](https://github.com/jekyll/jekyll-seo-tag/)
 - [Jekyll Sitemap](https://github.com/jekyll/jekyll-sitemap/)
+
+## Table of Contents <!-- omit in toc -->
+
+- [Installation](#installation)
+- [Usage](#usage)
+  - [Global Configuration](#global-configuration)
+  - [Post Configuration](#post-configuration)
+  - [Homepage](#homepage)
+  - [Navigation](#navigation)
+  - [Social Links](#social-links)
+  - [Archive](#archive)
+  - [Custom Head](#custom-head)
+- [Contributing](#contributing)
+- [Development](#development)
+- [License](#license)
 
 ## Installation
 
