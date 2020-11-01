@@ -20,7 +20,10 @@
 }
 
 .post-card {
-  margin-bottom: var(--spacer-2);
+  margin-bottom: var(--spacer);
+  padding: 1em;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
 
   a {
     color: inherit;
@@ -28,6 +31,7 @@
 
   .post-title {
     font-family: var(--body-font);
+    margin: 0;
   }
   .post-meta {
     margin-bottom: 0;
