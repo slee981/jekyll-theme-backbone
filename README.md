@@ -16,10 +16,13 @@ Scaffold is empirical. Standing on it, you -- the blogger -- can build a great b
 - [Open Color](https://yeun.github.io/open-color/)
 - Dark mode, via [`prefers-color-scheme`](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme)
 - [Font Awesome](https://fontawesome.com/)
+- Archive implemented by pure Liquid
 - Pagination, via [`jekyll-paginate`](https://rubygems.org/gems/jekyll-paginate)
 - [Jekyll Feed](https://github.com/jekyll/jekyll-feed/)
 - [Jekyll SEO Tag](https://github.com/jekyll/jekyll-seo-tag/)
 - [Jekyll Sitemap](https://github.com/jekyll/jekyll-sitemap/)
+- [Google Analytics](https://analytics.google.com/)
+- [Disqus](https://disqus.com/)
 
 ## Table of Contents <!-- omit in toc -->
 
@@ -89,6 +92,7 @@ If you want to use this theme on GitHub Pages, you can do that via `jekyll-remot
 | `date_format` | String | `%-d %b %Y` | The [date format](http://alanwsmith.com/jekyll-liquid-date-formatting-examples) which is used in many places on the website |
 | `tags_path` | String | --- | A path to the archive-by-tags page; It is used by tags on each post |
 | `google_analytics` | String | --- | Google Analytics tracking ID |
+| `disqus` | String | --- | Disqus short name |
 
 ### Post Configuration
 
