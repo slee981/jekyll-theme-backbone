@@ -88,6 +88,7 @@ If you want to use this theme on GitHub Pages, you can do that via `jekyll-remot
 | `author.url` | String | --- | A URL of the website author |
 | `date_format` | String | `%-d %b %Y` | The [date format](http://alanwsmith.com/jekyll-liquid-date-formatting-examples) which is used in many places on the website |
 | `tags_path` | String | --- | A path to the archive-by-tags page; It is used by tags on each post |
+| `google_analytics` | String | --- | Google Analytics tracking ID |
 
 ### Post Configuration
 
