@@ -1,0 +1,35 @@
+.separator {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 80%;
+  color: var(--border-color);
+  margin: var(--spacer-2) 0;
+}
+.separator::before, .separator::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid var(--border-color);
+}
+.separator::before {
+  margin-right: .25em;
+}
+.separator::after {
+  margin-left: .25em;
+}
+
+.post-card {
+  margin-bottom: var(--spacer-2);
+
+  a {
+    color: inherit;
+  }
+
+  .post-title {
+    font-family: var(--body-font);
+  }
+  .post-meta {
+    margin-bottom: 0;
+  }
+}

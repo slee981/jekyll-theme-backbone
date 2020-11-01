@@ -16,6 +16,7 @@ Scaffold is empirical. Standing on it, you -- the blogger -- can build a great b
 - [Open Color](https://yeun.github.io/open-color/)
 - Dark mode, via [`prefers-color-scheme`](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme)
 - [Font Awesome](https://fontawesome.com/)
+- Pagination, via [`jekyll-paginate`](https://rubygems.org/gems/jekyll-paginate)
 
 ## Installation
 
@@ -50,6 +51,15 @@ Or install it yourself as:
 | `lang` | String | `en` | The language of pages; The value can be overwritten by the `lang` variable on each page |
 | `author.name` | String | --- | The name of the website author |
 | `author.url` | String | --- | A URL of the website author |
+| `date_format` | String | `%-d %b %Y` | The [date format](http://alanwsmith.com/jekyll-liquid-date-formatting-examples) which is used in many places on the website |
+| `tags_path` | String | --- | A path to the archive-by-tags page; It is used by tags on each post |
+
+### Post Configuration
+
+| Variable | Type | Default | Specification |
+| -------- | ---- | ------- | ------------- |
+| `last_modified_at` | String | --- | The date of the last modification you made on a post after its publishing |
+| `author` | String or Array | --- | The author name(s) of the post |
 
 ### Homepage
 
@@ -83,6 +93,23 @@ Scaffold allows you to show social links on the website, all you need to do is c
 ```
 
 The `icon` property means a [Font Awesome](https://fontawesome.com/) class, and you can select any one you like.
+
+### Archive
+
+Pure provides some built-in archive pages. It is implemented in pure Liquid. If you want to archive posts by years, you can create a page and put these code in it:
+
+```yml
+---
+layout: archive
+type: years
+---
+```
+
+Similarly, if you want to archive posts by categories or tags, you can set the `type` property as `categories` or `tags`.
+
+### Custom Head
+
+Pure leaves a placeholder to allow defining custom head. All you need to do is putting data into `_includes/custom-head.html`, and they would be automatically included in `<head>`.
 
 ## Contributing
 

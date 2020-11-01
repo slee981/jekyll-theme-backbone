@@ -21,3 +21,83 @@ a {
     text-decoration: underline;
   }
 }
+
+figure {
+  margin: 0;
+}
+img {
+  display: block;
+  max-width: 100%;
+  margin-top: var(--spacer) 0;
+  border-radius: var(--border-radius);
+}
+
+table {
+  width: 100%;
+  border: 0 solid var(--border-color);
+  border-collapse: collapse;
+  margin: var(--spacer) 0;
+}
+
+td,
+th {
+  padding: .25rem .5rem;
+  border-color: inherit;
+  border-style: solid;
+  border-width: 0;
+  border-bottom-width: 1px;
+}
+
+th {
+  text-align: left;
+}
+
+thead th {
+  border-bottom-color: currentColor;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid var(--border-color);
+}
+
+mark {
+  padding: .15em .3em;
+  border-radius: var(--border-radius);
+  color: var(--body-bg);
+  background-color: var(--mark-color);
+}
+
+blockquote {
+  padding-left: 1em;
+  margin: var(--spacer) 0;
+  color: var(--body-color-light);
+  border-left: .25em solid var(--border-color);
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+}
+
+code,
+pre {
+  font-family: var(--code-font);
+}
+
+code {
+  padding: .1em .25em;
+  background-color: var(--border-color);
+  border-radius: var(--border-radius);
+}
+
+pre {
+  display: block;
+  overflow: auto;
+  padding: var(--spacer);
+  margin: var(--spacer) 0;
+
+  code {
+    padding: 0;
+    background-color: inherit;
+  }
+}

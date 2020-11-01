@@ -10,6 +10,9 @@ $xl-screen: 80rem;
 
   --border-radius: .4em;
 
+  --heading-font: Georgia, "Times New Roman", Times, "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  --code-font: "Source Code Pro", Menlo, "Lucida Console", Monaco, "Courier New", Courier, monospace;
+
   --spacer: 1rem;
   --spacer-2: 2rem;
   --spacer-3: 3rem;
@@ -23,10 +26,14 @@ $xl-screen: 80rem;
 
   --heading-color: var(--oc-black);
 
+  --code-bg: var(--oc-gray-1);
+
   --link-color: var(--oc-blue-6);
   --link-hover-color: var(--oc-blue-8);
 
-  --border-color: rgb(var(--oc-gray-4-rgb), .5);
+  --border-color: rgb(var(--oc-gray-5-rgb), .5);
+
+  --mark-color: var(--oc-yellow-8);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -37,9 +44,13 @@ $xl-screen: 80rem;
 
     --heading-color: var(--oc-white);
 
+    --code-bg: var(--oc-gray-6);
+
     --link-color: var(--oc-cyan-5);
     --link-hover-color: var(--oc-cyan-2);
 
-    --border-color: rgb(var(--oc-gray-8-rgb), .8);
+    --border-color: rgb(var(--oc-gray-7-rgb), .9);
+
+    --mark-color: var(--oc-yellow-2);
   }
 }

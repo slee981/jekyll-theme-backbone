@@ -1,0 +1,27 @@
+.highlight {
+  border-radius: var(--border-radius);
+}
+
+.rouge-table {
+  margin: 0;
+  font-size: 100%;
+
+  &,
+  td,
+  th {
+    border: 0;
+    padding: 0;
+  }
+
+  pre {
+    padding: 0;
+    margin: 0;
+  }
+
+  .gutter {
+    vertical-align: top;
+    user-select: none;
+    opacity: .25;
+    padding-right: var(--spacer);
+  }
+}
