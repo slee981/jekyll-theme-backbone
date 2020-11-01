@@ -102,6 +102,7 @@ If you want to use this theme on GitHub Pages, you can do that via `jekyll-remot
 | `last_modified_at` | String | --- | The date of the last modification you made on a post after its publishing |
 | `author` | String or Array | --- | The author name(s) of the post |
 | `math` | Boolean | `false` | Does enable MathJax on this page |
+| `comments` | Boolean | `true` | Does enable the Disqus comment system |
 
 ### Homepage
 
