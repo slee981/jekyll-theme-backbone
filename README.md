@@ -17,6 +17,9 @@ Scaffold is empirical. Standing on it, you -- the blogger -- can build a great b
 - Dark mode, via [`prefers-color-scheme`](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme)
 - [Font Awesome](https://fontawesome.com/)
 - Pagination, via [`jekyll-paginate`](https://rubygems.org/gems/jekyll-paginate)
+- [Jekyll Feed](https://github.com/jekyll/jekyll-feed/)
+- [Jekyll SEO Tag](https://github.com/jekyll/jekyll-seo-tag/)
+- [Jekyll Sitemap](https://github.com/jekyll/jekyll-sitemap/)
 
 ## Installation
 
@@ -39,6 +42,23 @@ And then execute:
 Or install it yourself as:
 
     gem install jekyll-theme-scaffold
+
+If you want to use this theme on GitHub Pages, you can do that via `jekyll-remote-theme`:
+
+1. Import `jekyll-remote-theme` in your `Gemfile`:
+
+    ```ruby
+    gem "jekyll-remote-theme"
+    ```
+
+2. Add these lines to your `_config.yml`:
+
+    ```yml
+    plugins:
+      - jekyll-remote-theme
+
+    remote_theme: sziv2p/jekyll-theme-scaffold
+    ```
 
 ## Usage
 
