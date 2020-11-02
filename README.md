@@ -12,7 +12,7 @@ Scaffold is empirical. Standing on it, you -- the blogger -- can build a great b
 
 *Check the [live demo](https://sziv2p.github.io/jekyll-theme-scaffold/).*
 
-<img src="./screenshot.png" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);" />
+![Screenshot](screenshot.png)
 
 ## Features (Not a Complete List) <!-- omit in toc -->
 
