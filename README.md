@@ -1,5 +1,9 @@
 # Scaffold <!-- omit in toc -->
 
+<a href="https://jekyll-themes.com">
+  <img src="https://img.shields.io/badge/featured%20on-JekyllThemes-red.svg" height="20" alt="Jekyll Themes Shield" >
+</a>
+
 Scaffold is a *one-column minimalist Jekyll theme for bloggers*.
 
 According to [Merriam-Webster](https://www.merriam-webster.com/), a *scaffold* is
