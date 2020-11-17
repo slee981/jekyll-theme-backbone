@@ -13,6 +13,11 @@
 }
 .social-icon {
   color: inherit;
+
+  &:hover,
+  &:focus {
+    color: var(--link-color);
+  }
 }
 
 @media (min-width: $md-screen) {

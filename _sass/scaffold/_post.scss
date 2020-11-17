@@ -63,7 +63,7 @@
       &:hover,
       &:focus {
         color: var(--body-bg);
-        background-color: var(--link-hover-color);
+        background-color: var(--link-color);
       }
     }
   }
@@ -91,11 +91,7 @@
   margin: 0;
   list-style: none;
 
-  a {
-    text-decoration: none;
-
-    small {
-      color: var(--body-color-light);
-    }
+  small {
+    color: var(--body-color-light);
   }
 }

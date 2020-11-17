@@ -20,37 +20,31 @@ $xl-screen: 80rem;
   /*  Colors
    *  ─────────────────────────────────── */
   
-  --body-color: var(--oc-gray-8);
-  --body-color-light: var(--oc-gray-6);
   --body-bg: var(--oc-white);
-
-  --heading-color: var(--oc-black);
-
   --code-bg: var(--oc-gray-1);
 
-  --link-color: var(--oc-blue-6);
-  --link-hover-color: var(--oc-blue-8);
+  --border-color: rgb(var(--oc-gray-5-rgb), .6);
+  --body-color-light: var(--oc-gray-6);
+  --body-color: var(--oc-gray-8);
+  --heading-color: var(--oc-black);
 
-  --border-color: rgb(var(--oc-gray-5-rgb), .5);
+  --link-color: var(--oc-blue-8);
 
   --mark-color: var(--oc-yellow-8);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --body-color: var(--oc-gray-2);
-    --body-color-light: var(--oc-gray-5);
     --body-bg: var(--oc-gray-9);
+    --code-bg: var(--oc-gray-8);
 
+    --border-color: rgb(var(--oc-gray-7-rgb), .8);
+    --body-color-light: var(--oc-gray-6);
+    --body-color: var(--oc-gray-4);
     --heading-color: var(--oc-white);
 
-    --code-bg: var(--oc-gray-6);
+    --link-color: var(--oc-cyan-4);
 
-    --link-color: var(--oc-cyan-5);
-    --link-hover-color: var(--oc-cyan-2);
-
-    --border-color: rgb(var(--oc-gray-7-rgb), .9);
-
-    --mark-color: var(--oc-yellow-2);
+    --mark-color: var(--oc-yellow-4);
   }
 }

@@ -17,7 +17,6 @@ a {
   // `:focus` is linked to `:hover` for basic accessibility
   &:hover,
   &:focus {
-    color: var(--link-hover-color);
     text-decoration: underline;
   }
 }
@@ -86,7 +85,7 @@ pre {
 
 code {
   padding: .1em .25em;
-  background-color: var(--border-color);
+  background-color: var(--code-bg);
   border-radius: var(--border-radius);
 }
 

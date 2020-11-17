@@ -27,6 +27,12 @@
 
   a {
     color: inherit;
+
+    &:hover,
+    &:focus {
+      color: var(--link-color);
+      text-decoration: none;
+    }
   }
 
   .post-title {
