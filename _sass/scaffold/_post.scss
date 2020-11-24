@@ -95,3 +95,12 @@
     color: var(--body-color-light);
   }
 }
+
+.task-list {
+  list-style: none;
+  padding-inline-start: 1.5em;
+}
+.task-list-item-checkbox {
+  margin: 0 .2em .25em -1.5em;
+  vertical-align: middle;
+}
