@@ -45,3 +45,42 @@
     }
   }
 }
+
+@media screen and (min-width: $lg-screen) {
+  .masthead {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .masthead-title {
+    display: block;
+    font-size: 200%;
+  }
+
+  .masthead-tagline {
+    display: block;
+    font-size: 100%;
+  }
+
+  .nav {
+    margin-top: var(--spacer-2);
+  }
+  .nav-item {
+    display: block;
+    margin-right: 0;
+    margin-bottom: var(--spacer);
+    font-size: 120%;
+
+    &:before {
+      content: none;
+    }
+
+    a {
+      border-bottom: 2px solid var(--body-color);
+    }
+  }
+}
