@@ -3,11 +3,13 @@
   {% include head.html %}
   <body>
     <div class="container">
-      {% include header.html %}
+      <aside class="sidebar-left">
+        {% include header.html %}
+      </aside>
       <main>
         {{ content }}
+        {% include footer.html %}
       </main>
-      {% include footer.html %}
     </div>
 
     {% if page.math %}

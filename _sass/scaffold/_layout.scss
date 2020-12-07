@@ -3,3 +3,24 @@
   margin: 0 auto;
   padding: 0 var(--spacer);
 }
+
+@media screen and (min-width: $lg-screen) {
+  .container {
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  main {
+    flex: 1;
+    max-width: $md-screen;
+    margin-left: 25%;
+  }
+  
+  .sidebar-left {
+    position: fixed;
+    top: 0;
+    width: 25%;
+  }
+}
