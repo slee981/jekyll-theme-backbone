@@ -16,11 +16,15 @@
     flex: 1;
     max-width: $md-screen;
     margin-left: 25%;
+    padding: 0 var(--spacer);
   }
   
   .sidebar-left {
     position: fixed;
     top: 0;
     width: 25%;
+    height: 100vh;
+    padding: var(--spacer);
+    background-color: var(--code-bg);
   }
 }
