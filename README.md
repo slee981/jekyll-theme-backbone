@@ -4,7 +4,7 @@
   <img src="https://img.shields.io/badge/featured%20on-JekyllThemes-red.svg" height="20" alt="Jekyll Themes Shield" >
 </a>
 
-Scaffold is a *one-column minimalist Jekyll theme for bloggers*.
+Scaffold is a *minimalist yet powerful Jekyll theme for bloggers*.
 
 According to [Merriam-Webster](https://www.merriam-webster.com/), a *scaffold* is
 
@@ -26,6 +26,7 @@ Scaffold is empirical. Standing on it, you -- the blogger -- can build a great b
 - [Font Awesome](https://fontawesome.com/)
 - Archive implemented by pure Liquid
 - Pagination, via [`jekyll-paginate`](https://rubygems.org/gems/jekyll-paginate)
+- TOC, via [`jekyll-toc`](https://github.com/allejo/jekyll-toc)
 - [Jekyll Feed](https://github.com/jekyll/jekyll-feed/)
 - [Jekyll SEO Tag](https://github.com/jekyll/jekyll-seo-tag/)
 - [Jekyll Sitemap](https://github.com/jekyll/jekyll-sitemap/)
@@ -111,6 +112,7 @@ If you want to use this theme on GitHub Pages, you can do that via `jekyll-remot
 | `author` | String or Array | --- | The author name(s) of the post |
 | `math` | Boolean | `false` | Does enable MathJax on this page |
 | `comments` | Boolean | `true` | Does enable the Disqus comment system |
+| `toc` | Boolean | `false` | Does enable the TOC |
 
 ### Homepage
 
