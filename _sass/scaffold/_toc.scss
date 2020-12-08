@@ -1,0 +1,25 @@
+.toc-div {
+  padding-top: var(--spacer);
+}
+
+.toc-title {
+  margin: 0;
+}
+
+.toc,
+.toc ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-inline-start: 1em;
+
+  li {
+    margin-top: var(--spacer);
+    margin-bottom: var(--spacer);
+  }
+}
+
+.toc {
+  max-height: 80vh;
+  overflow-y: scroll;
+}

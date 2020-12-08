@@ -4,6 +4,10 @@
   padding: 0 var(--spacer);
 }
 
+.sidebar-right {
+  display: none;
+}
+
 @media screen and (min-width: $lg-screen) {
   .container {
     max-width: 100%;
@@ -14,17 +18,32 @@
   
   main {
     flex: 1;
-    max-width: $md-screen;
-    margin-left: 25%;
-    padding: 0 var(--spacer);
+    max-width: 60%;
+    margin-left: 22.5%;
+    padding: 0 var(--spacer-2);
   }
   
   .sidebar-left {
     position: fixed;
     top: 0;
-    width: 25%;
+    width: 22.5%;
     height: 100vh;
     padding: var(--spacer);
     background-color: var(--code-bg);
+  }
+}
+
+@media screen and (min-width: $xl-screen) {
+  main {
+    max-width: 55%;
+  }
+
+  .sidebar-right {
+    display: block;
+    position: fixed;
+    top: 0;
+    width: 22.5%;
+    margin-left: 77.5%;
+    padding: var(--spacer);
   }
 }

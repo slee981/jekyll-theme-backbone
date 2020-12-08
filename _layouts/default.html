@@ -10,6 +10,11 @@
         {{ content }}
         {% include footer.html %}
       </main>
+      <aside class="sidebar-right">
+        {%- if page.toc -%}
+          {% include toc-div.html %}
+        {%- endif -%}
+      </aside>
     </div>
 
     {% if page.math %}
