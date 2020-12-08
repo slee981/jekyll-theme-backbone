@@ -1,5 +1,8 @@
+.posts {
+  margin-top: var(--spacer-2);
+}
 .post-card {
-  margin-top: var(--spacer);
+  margin-bottom: var(--spacer);
   padding: 1em;
   border: 1px solid var(--border-color);
   border-radius: var(--border-radius);
