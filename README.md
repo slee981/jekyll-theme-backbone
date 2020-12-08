@@ -16,7 +16,8 @@ Scaffold is empirical. Standing on it, you -- the blogger -- can build a great b
 
 *Check the [live demo](https://sziv2p.github.io/jekyll-theme-scaffold/).*
 
-![Screenshot](screenshot.png)
+![Screenshot Light](screenshot-light.png)
+![Screenshot Dark](screenshot-dark.png)
 
 ## Features (Not a Complete List) <!-- omit in toc -->
 
