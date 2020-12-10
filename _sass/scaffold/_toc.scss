@@ -1,25 +1,56 @@
-.toc-div {
-  padding-top: var(--spacer);
-}
-
 .toc-title {
   margin: 0;
+  text-align: center;
+  border: 1px solid var(--border-color);
+  border-top-left-radius: var(--border-radius);
+  border-top-right-radius: var(--border-radius);
+  padding: .2em;
+  background-color: var(--code-bg);
 }
 
 .toc,
 .toc ul {
   list-style: none;
-  padding: 0;
   margin: 0;
-  margin-inline-start: 1em;
-
-  li {
-    margin-top: var(--spacer);
-    margin-bottom: var(--spacer);
-  }
+  padding: 0;
 }
 
 .toc {
   max-height: 80vh;
   overflow-y: scroll;
+  margin-left: 0;
+  border: 1px solid var(--border-color);
+  border-top: 0;
+  border-bottom: 0;
+  border-bottom-left-radius: var(--border-radius);
+  border-bottom-right-radius: var(--border-radius);
+
+  a {
+    display: block;
+    border-bottom: 1px solid var(--border-color);
+
+    color: inherit;
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+      background-color: var(--border-color);
+    }
+  }
+
+  li > a {
+    padding-left: .5em;
+  }
+  ul li > a {
+    padding-left: 1em;
+  }
+  ul li ul li > a {
+    padding-left: 1.5em;
+  }
+  ul li ul li ul li > a {
+    padding-left: 2em;
+  }
+  ul li ul li ul li ul li > a {
+    padding-left: 2.5em;
+  }
 }
