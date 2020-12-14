@@ -8,13 +8,7 @@
   border-radius: var(--border-radius);
 
   a {
-    color: inherit;
-
-    &:hover,
-    &:focus {
-      color: var(--link-color);
-      text-decoration: none;
-    }
+    @include alternative-link-style();
   }
 
   .post-title {

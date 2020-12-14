@@ -12,12 +12,7 @@
   margin-right: var(--spacer);
 }
 .social-icon {
-  color: inherit;
-
-  &:hover,
-  &:focus {
-    color: var(--link-color);
-  }
+  @include alternative-link-style();
 }
 
 @media (min-width: $md-screen) {
