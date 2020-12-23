@@ -91,6 +91,8 @@ If you want to use this theme on GitHub Pages, you can do that via `jekyll-remot
 
 ## Usage
 
+The main usage of this theme is described in detail below. If you find the document difficult to understand or not specific enough, you can also use the [`gh-pages`](https://github.com/sziv2p/jekyll-theme-scaffold/tree/gh-pages) branch of this repository as an example to learn how to use this theme.
+
 ### Global Configuration
 
 | Variable | Type | Default | Specification |
