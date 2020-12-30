@@ -28,7 +28,13 @@ layout: default
       {%- endif -%}
     </div>
 
-    <p>{{ post.excerpt | strip_html }}</p>
+    <p>
+      {% if post.description %}
+        {{ post.description }}
+      {% else %}
+        {{ post.excerpt | strip_html }}
+      {% endif %}
+    </p>
   </section>
   {% endfor %}
 </div>

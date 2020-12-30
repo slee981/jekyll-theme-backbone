@@ -111,6 +111,7 @@ The main usage of this theme is described in detail below. If you find the docum
 
 | Variable | Type | Default | Specification |
 | -------- | ---- | ------- | ------------- |
+| `description` | String | --- | A description of the current post |
 | `last_modified_at` | String | --- | The date of the last modification you made on a post after its publishing |
 | `author` | String or Array | --- | The author name(s) of the post |
 | `math` | Boolean | `false` | Does enable MathJax on this page |
