@@ -9,4 +9,5 @@ Gemfile.lock
 Makefile
 _config.yml
 _posts
+_data
 index.markdown
