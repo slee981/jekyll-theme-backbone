@@ -17,8 +17,12 @@
       </aside>
     </div>
 
-    {% if page.math %}
+    {% if page.mathjax %}
       {% include mathjax.html %}
+    {% endif %}
+    
+    {% if page.katex %}
+      {% include katex.html %}
     {% endif %}
     
     {% if jekyll.environment == 'production' and site.google_analytics %}
