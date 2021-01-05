@@ -6,5 +6,7 @@ _site
 Gemfile.lock
 
 # for testing
+Makefile
 _config.yml
 _posts
+index.markdown
