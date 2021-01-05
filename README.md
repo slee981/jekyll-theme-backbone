@@ -1,10 +1,10 @@
-# Scaffold <!-- omit in toc -->
+# Backbone <!-- omit in toc -->
 
 <a href="https://jekyll-themes.com">
   <img src="https://img.shields.io/badge/featured%20on-JekyllThemes-red.svg" height="20" alt="Jekyll Themes Shield" >
 </a>
 
-Scaffold is a *minimalist yet powerful Jekyll theme for bloggers*.
+Scaffold is a *minimalist Jekyll theme for bloggers with Bootstrap and KaTex.
 
 According to [Merriam-Webster](https://www.merriam-webster.com/), a *scaffold* is
 

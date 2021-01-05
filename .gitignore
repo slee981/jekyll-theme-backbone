@@ -4,3 +4,7 @@
 .sass-cache
 _site
 Gemfile.lock
+
+# for testing
+_config.yml
+_posts

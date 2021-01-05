@@ -1,13 +1,13 @@
 # frozen_string_literal: true
 
 Gem::Specification.new do |spec|
-  spec.name          = "jekyll-theme-scaffold"
-  spec.version       = "1.1.0"
-  spec.authors       = ["Songzi Vong"]
-  spec.email         = ["sziv2p@gmail.com"]
+  spec.name          = "jekyll-theme-backbone"
+  spec.version       = "0.1.0"
+  spec.authors       = ["Stephen Lee"]
+  spec.email         = ["smlee.981@gmail.com"]
 
-  spec.summary       = "A minimalist yet powerful Jekyll theme for bloggers"
-  spec.homepage      = "https://github.com/sziv2p/jekyll-theme-scaffold"
+  spec.summary       = "A minimalist Jekyll theme for bloggers with Bootstrap and KaTex"
+  spec.homepage      = "https://github.com/slee981/jekyll-theme-backbone"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0").select { |f| f.match(%r!^(assets|_layouts|_includes|_sass|LICENSE|README)!i) }
