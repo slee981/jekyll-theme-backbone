@@ -4,12 +4,14 @@ layout: default
 
 {{ content }}
 
-<div class="posts">
+<!-- <div class="posts">
+
   {%- if paginator -%}
     {%- assign posts = paginator.posts -%}
   {%- else -%}
     {%- assign posts = site.posts -%}
   {%- endif -%}
+
   {% for post in posts %}
   <section class="post post-card">
     <h2 class="post-title">
@@ -36,6 +38,59 @@ layout: default
       {% endif %}
     </p>
   </section>
+  {% endfor %}
+</div>
+
+{%- if jekyll.environment == "production" and site.disqus -%}
+  <script id="dsq-count-scr" src="//{{ site.disqus }}.disqus.com/count.js" async></script>
+{%- endif -%}
+
+{% if paginator %}
+<div class="pagination">
+  {% if paginator.next_page %}
+    <a class="pagination-item older" href="{{ paginator.next_page_path | relative_url }}">Older</a>
+  {% else %}
+    <span class="pagination-item older">Older</span>
+  {% endif %}
+  {% if paginator.previous_page %}
+    <a class="pagination-item newer" href="{{ paginator.previous_page_path | prepend: relative_url }}">Newer</a>
+  {% else %}
+    <span class="pagination-item newer">Newer</span>
+  {% endif %}
+</div>
+{% endif %} -->
+
+<div class="posts">
+
+  {%- if paginator -%}
+    {%- assign posts = paginator.posts -%}
+  {%- else -%}
+    {%- assign posts = site.posts -%}
+  {%- endif -%}
+
+  {% for post in posts %}
+    <div class="card m-3">
+      <a class="card-full" href="{{ post.url | relative_url }}">
+        <h5 class="card-header">{{ post.title }}</h5>
+        <div class="card-body">
+
+          <div class="card-subtitle">
+          </div>
+
+          <p class="card-text">
+            {% if post.description %}
+              {{ post.description }}
+            {% else %}
+              {{ post.excerpt | strip_html }}
+            {% endif %}
+          </p>
+
+        </div>
+        <div class="card-footer text-muted">
+          <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date_to_string }}</time>
+        </div>
+      </a>
+    </div>
   {% endfor %}
 </div>
 

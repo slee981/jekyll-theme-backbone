@@ -1,15 +1,25 @@
-<header class="masthead">
-  <a class="masthead-title" href="{{ '/' | relative_url }}" title="Home">{{ site.title }}</a>
-  <small class="masthead-tagline">{{ site.tagline }}</small>
+<header>
+  <!-- <a class="masthead-title" href="{{ '/' | relative_url }}" title="Home">{{ site.title }}</a>
+  <small class="masthead-tagline">{{ site.tagline }}</small> -->
   {% if site.data.navigation %}
-    <nav class="nav">
-      <ul class="nav-list">
-      {%- for item in site.data.navigation -%}
-        <li class="nav-item">
-          <a href="{{ item.link | relative_url }}">{{ item.name }}</a>
-        </li>
-      {%- endfor -%}
-      </ul>
-    </nav>
+  <nav class="navbar navbar-expand-md navbar-light fixed-top bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/">Backbone</a>
+      
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+      <div class="navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav me-auto mb-3 mb-md-0">
+        {% for item in site.data.navigation %}
+          <li class="nav-item">
+            <a class="nav-link" href="{{ item.link | relative_url }}">{{ item.name }}</a>
+          </li>
+        {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </nav>
   {% endif %}
 </header>
