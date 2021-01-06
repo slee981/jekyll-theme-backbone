@@ -3,18 +3,30 @@
   {% include head.html %}
   <body>
     <div class="container">
+
       <div class="include-header">
         {% include header.html %}
       </div>
-      <main>
-        {{ content }}
-        {% include footer.html %}
-      </main>
-      <aside class="sidebar-right">
-        {%- if page.toc -%}
-          {% include toc-div.html %}
-        {%- endif -%}
-      </aside>
+
+      <!-- if toc, we want to space the columns accordingly -->
+      <div class="row">
+        {% if page.toc %}
+          <div class="col-md-8">
+        {% else %}
+          <div class="col">
+        {% endif %}
+          <main>
+            {{ content }}
+            {% include footer.html %}
+          </main>
+        </div>
+
+        {% if page.toc %}
+          <div class="col-md-4">
+            {% include toc-div.html %}
+          </div>
+        {% endif %}
+      </div>
     </div>
 
     {% if page.mathjax %}
