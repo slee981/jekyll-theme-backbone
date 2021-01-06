@@ -1,13 +1,13 @@
 # frozen_string_literal: true
 
 Gem::Specification.new do |spec|
-  spec.name          = "jekyll-theme-backbone"
+  spec.name          = "jekyll-theme-cadre"
   spec.version       = "0.1.0"
   spec.authors       = ["Stephen Lee"]
   spec.email         = ["smlee.981@gmail.com"]
 
   spec.summary       = "A minimalist Jekyll theme for bloggers with Bootstrap and KaTex"
-  spec.homepage      = "https://github.com/slee981/jekyll-theme-backbone"
+  spec.homepage      = "https://github.com/slee981/jekyll-theme-cadre"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0").select { |f| f.match(%r!^(assets|_layouts|_includes|_sass|LICENSE|README)!i) }
