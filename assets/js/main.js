@@ -6,8 +6,9 @@ function scrollFunction() {
 
   // if you are scrolling
   if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
-    menu.style.borderBottom = "2px solid rgb(65, 65, 65)";
+    menu.style.borderBottom = "1px solid rgb(65, 65, 65)";
     menu.style["boxShadow"] = "5px 10px 18px #888888";
+    menu.style["opacity"] = "0.95";
 
     // find and replace the navbar padding 
     // if scrolling, smaller navbar
@@ -18,6 +19,7 @@ function scrollFunction() {
   else {
     menu.style["boxShadow"] = "none";
     menu.style.borderBottom = "none";
+    menu.style["opacity"] = "1";
 
     // find and replace the navbar padding 
     // if not scrolling, bigger navbar

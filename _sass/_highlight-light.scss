@@ -2,15 +2,20 @@
 .highlight table pre { margin: 0; }
 .highlight, .highlight .w {
   color: #282828;
-  background-color: #fbf1c7;
+  // background-color: #fbf1c7;
+  background-color: #f3f3f3;
+}
+.highlight .nf {
+  // color: rgb(112, 179, 233);
+  color: #1f80ff;
 }
 .highlight .err {
   color: #9d0006;
-  background-color: #fbf1c7;
+  // background-color: #fbf1c7;
   font-weight: bold;
 }
 .highlight .c, .highlight .ch, .highlight .cd, .highlight .cm, .highlight .cpf, .highlight .c1, .highlight .cs {
-  color: #928374;
+  color: #9c9c9c;
   font-style: italic;
 }
 .highlight .cp {
@@ -38,13 +43,15 @@
   font-weight: bold;
 }
 .highlight .k, .highlight .kn, .highlight .kp, .highlight .kr, .highlight .kv {
-  color: #9d0006;
+  // color: #9d0006;
+  color: #c50c3a;
 }
 .highlight .kc {
   color: #8f3f71;
 }
 .highlight .kt {
-  color: #b57614;
+  // color: #b57614;
+  color: #96743e;
 }
 .highlight .kd {
   color: #af3a03;
@@ -68,7 +75,8 @@
   color: #427b58;
 }
 .highlight .nc {
-  color: #427b58;
+  // color: #427b58;
+  color: rgb(0, 94, 170);
 }
 .highlight .no {
   color: #8f3f71;

@@ -1,9 +1,14 @@
+.katex-display {
+  overflow: auto;
+}
+
 .highlight {
   border-radius: var(--border-radius);
 }
 
 .highlighter-rouge {
-  color: var(--oc-red-8);
+  // color: var(--oc-red-8);
+  color: var(--oc-black-5);
 }
 
 .rouge-table {
