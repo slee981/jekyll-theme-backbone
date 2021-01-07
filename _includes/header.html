@@ -1,26 +1,22 @@
-<header>
-  <!-- <small class="masthead-tagline">{{ site.tagline }}</small> -->
-  <nav class="navbar navbar-expand-md fixed-top navbar-light bg-light py-4 px-5" id="menu">
-    <div class="container-fluid mx-5">
+<nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light py-4 px-5" id="menu">
 
-      <!-- TODO: add name from _config.yml or default -->
-      <a class="navbar-brand" href="/">Cadre</a>
-      
-      {% if site.data.navigation %}
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      
-      <div class="navbar-collapse justify-content-end" id="navbarCollapse">
-        <ul class="navbar-nav">
-        {% for item in site.data.navigation %}
-          <li class="nav-item">
-            <a class="nav-link" href="{{ item.link | relative_url }}">{{ item.name }}</a>
-          </li>
-        {% endfor %}
-        </ul>
+  <div class="container-fluid">
+
+  <!-- TODO: add name from _config.yml or default -->
+  <a class="navbar-brand" href="/">Cadre</a>
+  
+  {% if site.data.navigation %}
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <div class="collapse navbar-collapse justify-content-end" id="navbarCollapse">
+      <div class="navbar-nav">
+      {% for item in site.data.navigation %}
+        <a class="nav-item nav-link" href="{{ item.link | relative_url }}">{{ item.name }}</a>
+      {% endfor %}
       </div>
-      {% endif %}
     </div>
-  </nav>
-</header>
+  {% endif %}
+  </div>
+</nav>

@@ -2,27 +2,3 @@
   padding: $top-nav-space 0;
   margin: $top-nav-space 0;
 }
-
-.sidebar-right {
-  display: none;
-}
-
-// @media screen and (min-width: $lg-screen) {
-//   main {
-//     flex: 1;
-//     max-width: 60%;
-//     margin-left: 22.5%;
-//     padding: 0 var(--spacer-2);
-//   }
-// }
-
-@media screen and (min-width: $xl-screen) {
-  .sidebar-right {
-    display: block;
-    position: fixed;
-    top: 0;
-    width: 22.5%;
-    margin-left: 77.5%;
-    padding: var(--spacer);
-  }
-}

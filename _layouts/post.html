@@ -2,91 +2,36 @@
 layout: default
 ---
 
-<!-- <article class="post">
-  <h1 class="post-title">{{ page.title }}</h1>
-  <div class="post-meta">
-    {%- assign date_format = site.date_format | default: "%-d %b %Y" -%}
-    <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: date_format }}</time>
-    {%- if page.last_modified_at -%}
-      <span> ~ </span>
-      {%- assign mdate = page.last_modified_at | date_to_xmlschema -%}
-      <time datetime="{{ mdate }}" itemprop="dateModified">
-        {{ mdate | date: date_format }}
-      </time>
-    {%- endif -%}
-    {%- if page.author -%}
-      <span> • </span>
-      {% for author in page.author %}
-        <span itemprop="author" itemscope itemtype="http://schema.org/Person">
-          {{ author }}
-        </span>
-        {%- if forloop.last == false %}, {% endif -%}
-      {% endfor %}
-    {%- endif -%}
-  </div>
-
-  {{ content }}
-
-  {% if page.tags.size > 0 %}
-    <div class="post-meta post-tags-section">
-      <i class="post-tags-icon fas fa-tags"></i>
-      <ul class="post-tags">
-        {%- for tag in page.tags -%}
-          <li>
-            {% assign slugified_tag = tag | slugify %}
-            {%- if site.tags_path -%}
-              <a class="post-tag" href="{{ site.tags_path | relative_url }}#{{ slugified_tag }}">{{ slugified_tag }}</a>
-            {%- else -%}
-              <span class="post-tag">{{ slugified_tag }}</span>
-            {%- endif -%}
-          </li>
-        {%- endfor -%}
-      </ul>
-  </div>
-  {% endif %}
-</article>
-
-{% if jekyll.environment == "production" and site.disqus and page.comments != false %}
-  {% include disqus.html %}
-{% endif %}
-
-{% if site.related_posts != empty %}
-<aside class="related">
-  <h2>Related posts</h2>
-  <ul class="related-posts">
-    {% for post in site.related_posts limit:3 %}
-      <li>
-        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-        <small><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date_to_string }}</time></small>
-      </li>
-    {% endfor %}
-  </ul>
-</aside>
-{% endif %} -->
-
 <div class="row">
-  <div class="col-md-8">
-    <article class="post">
+
+  <!-- START COL WITH TOC -->
+  <div class="col-sm-3">
+    {% include toc-div.html %}
+  </div>
+
+  <!-- MAIN POST -->
+  <div class="col-sm-9 post">
+
       <h1 class="post-title">{{ page.title }}</h1>
       <div class="post-meta">
-        {%- assign date_format = site.date_format | default: "%-d %b %Y" -%}
+        {% assign date_format = site.date_format | default: "%d %b %Y" %}
         <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: date_format }}</time>
-        {%- if page.last_modified_at -%}
+        {% if page.last_modified_at %}
           <span> ~ </span>
-          {%- assign mdate = page.last_modified_at | date_to_xmlschema -%}
+          {% assign mdate = page.last_modified_at | date_to_xmlschema %}
           <time datetime="{{ mdate }}" itemprop="dateModified">
             {{ mdate | date: date_format }}
           </time>
-        {%- endif -%}
-        {%- if page.author -%}
+        {% endif %}
+        {% if page.author %}
           <span> • </span>
           {% for author in page.author %}
             <span itemprop="author" itemscope itemtype="http://schema.org/Person">
               {{ author }}
             </span>
-            {%- if forloop.last == false %}, {% endif -%}
+            {% if forloop.last == false %}, {% endif %}
           {% endfor %}
-        {%- endif -%}
+        {% endif %}
       </div>
 
       {{ content }}
@@ -95,24 +40,19 @@ layout: default
         <div class="post-meta post-tags-section">
           <i class="post-tags-icon fas fa-tags"></i>
           <ul class="post-tags">
-            {%- for tag in page.tags -%}
+            {% for tag in page.tags %}
               <li>
                 {% assign slugified_tag = tag | slugify %}
-                {%- if site.tags_path -%}
+                {% if site.tags_path %}
                   <a class="post-tag" href="{{ site.tags_path | relative_url }}#{{ slugified_tag }}">{{ slugified_tag }}</a>
-                {%- else -%}
+                {% else %}
                   <span class="post-tag">{{ slugified_tag }}</span>
-                {%- endif -%}
+                {% endif %}
               </li>
-            {%- endfor -%}
+            {% endfor %}
           </ul>
       </div>
       {% endif %}
-    </article>
-  </div>
-
-  <!-- START COL WITH TOC -->
-  <div class="col-md-4">
   </div>
 
   <!-- END OF POST STUFF -->

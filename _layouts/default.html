@@ -1,31 +1,19 @@
+---
+---
 <!doctype html>
 <html lang="{{ page.lang | default: site.lang | default: "en" }}">
   {% include head.html %}
   <body>
     <div class="container">
 
-      <div class="include-header">
-        {% include header.html %}
-      </div>
+      {% include header.html %}
 
-      <!-- if toc, we want to space the columns accordingly -->
+      <main>
+        {{ content }}
+      </main>
+
       <div class="row">
-        {% if page.toc %}
-          <div class="col-md-8">
-        {% else %}
-          <div class="col">
-        {% endif %}
-          <main>
-            {{ content }}
-            {% include footer.html %}
-          </main>
-        </div>
-
-        {% if page.toc %}
-          <div class="col-md-4">
-            {% include toc-div.html %}
-          </div>
-        {% endif %}
+        {% include footer.html %}
       </div>
     </div>
 

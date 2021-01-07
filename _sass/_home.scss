@@ -1,3 +1,9 @@
 .card-full {
   text-decoration: none;
 }
+
+.about {
+  position: -webkit-sticky !important;
+  position: sticky !important;
+  top: 100px !important; 
+}
