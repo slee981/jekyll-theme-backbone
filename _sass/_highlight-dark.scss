@@ -2,11 +2,14 @@
 .highlight table pre { margin: 0; }
 .highlight, .highlight .w {
   color: #fbf1c7;
-  background-color: #282828;
+  background-color: #37383a;
+}
+.highlight .nf {
+  color: rgb(112, 179, 233);
 }
 .highlight .err {
   color: #fb4934;
-  background-color: #282828;
+  background-color: #2e2d31;
   font-weight: bold;
 }
 .highlight .c, .highlight .ch, .highlight .cd, .highlight .cm, .highlight .cpf, .highlight .c1, .highlight .cs {
@@ -38,13 +41,13 @@
   font-weight: bold;
 }
 .highlight .k, .highlight .kn, .highlight .kp, .highlight .kr, .highlight .kv {
-  color: #fb4934;
+  color: #d18fe5;
 }
 .highlight .kc {
   color: #d3869b;
 }
 .highlight .kt {
-  color: #fabd2f;
+  color: #4db4dd;
 }
 .highlight .kd {
   color: #fe8019;
@@ -68,7 +71,7 @@
   color: #8ec07c;
 }
 .highlight .nc {
-  color: #8ec07c;
+  color: #ddbb4d;
 }
 .highlight .no {
   color: #d3869b;

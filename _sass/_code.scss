@@ -2,6 +2,10 @@
   border-radius: var(--border-radius);
 }
 
+.highlighter-rouge {
+  color: var(--oc-red-8);
+}
+
 .rouge-table {
   margin: 0;
   font-size: 100%;
@@ -23,5 +27,28 @@
     user-select: none;
     opacity: .25;
     padding-right: var(--spacer);
+  }
+}
+
+code,
+pre {
+  font-family: var(--code-font);
+}
+
+code {
+  padding: .1em .25em;
+  border-radius: var(--border-radius);
+  background-color: var(--code-bg);
+}
+
+pre {
+  display: block;
+  overflow: auto;
+  padding: var(--spacer);
+  margin: var(--spacer) 0;
+
+  code {
+    padding: 0;
+    background-color: inherit;
   }
 }
