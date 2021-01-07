@@ -1,5 +1,11 @@
 .katex-display {
-  overflow: auto;
+  background-color: rgb(255, 251, 244);
+  overflow-x: auto;
+  overflow-y: visible;
+}
+
+.katex-html {
+  padding: 10px 0px;
 }
 
 .highlight {
@@ -38,6 +44,7 @@
 code,
 pre {
   font-family: var(--code-font);
+  background-color: var(--code-bg);
 }
 
 code {
