@@ -1,29 +1,7 @@
-.footer {
+footer {
   background-color: var(--footer-color);
 }
 
-.social-icons {
-  list-style: none;
-  padding: 0;
-  height: calc(var(--body-line-height) * var(--body-font-size));
-}
-.social-icon-item {
-  float: left;
-  margin-right: var(--spacer);
-}
 .social-icon {
-  @include alternative-link-style();
-}
-
-@media (min-width: $md-screen) {
-  .footer {
-    display: flex;
-  }
-  .footer-column {
-    width: 100%;
-  }
-
-  .social-icons {
-    margin: 0;
-  }
+  text-decoration: none; 
 }

@@ -1,0 +1,9 @@
+<div class="footer-element">
+    {%- assign date_to   = site.time | date_to_xmlschema -%}
+    {%- assign year_to   = date_to | date: '%Y' -%}
+    {% if site.title %}
+        <p>&copy;{{ year_to }} {{ site.title }}</p>
+    {% else %}
+        <p>&copy;{{ year_to }}</p>
+    {% endif %}
+</div>
