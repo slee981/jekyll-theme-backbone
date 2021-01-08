@@ -1,7 +1,15 @@
 <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light py-4 px-5" id="menu">
 
   <!-- TODO: add name from _config.yml or default -->
-  <a class="navbar-brand" href="/">Cadre</a>
+  <a class="navbar-brand" href="/">
+  {% if site.site_logo %}
+    <img class="navbar-brand-img top" id="site-logo" src="{{ site.site_logo | relative_url }}" alt="">
+  {% elsif site.title %}
+    {{ site.title }}
+  {% else %}
+    Cadre
+  {% endif %}
+  </a>
   
   {% if site.data.navigation %}
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">

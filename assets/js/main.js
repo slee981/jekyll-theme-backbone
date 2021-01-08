@@ -3,6 +3,7 @@ window.onscroll = () => scrollFunction();
 
 function scrollFunction() {
   let menu = document.getElementById("menu");
+  let logo = document.getElementById("site-logo");
 
   // if you are scrolling
   if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
@@ -11,8 +12,9 @@ function scrollFunction() {
     menu.style["opacity"] = "0.95";
 
     // find and replace the navbar padding 
-    // if scrolling, smaller navbar
+    // if scrolling, smaller vertical padding 
     menu.className = menu.className.replace(/py-\d/, 'py-3');
+    logo.className = logo.className.replace(/top/, 'scrolling');
   }
 
   // if you are not scrolling
@@ -22,7 +24,8 @@ function scrollFunction() {
     menu.style["opacity"] = "1";
 
     // find and replace the navbar padding 
-    // if not scrolling, bigger navbar
+    // if scrolling, larger vertical padding 
     menu.className = menu.className.replace(/py-\d/, 'py-4');
+    logo.className = logo.className.replace(/scrolling/, 'top');
   }
 }

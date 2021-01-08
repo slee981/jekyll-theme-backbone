@@ -1,2 +1,25 @@
-nav.navbar {
+.navbar-brand-img {
+    transition: all 0.5s ease-in-out;
+}
+
+.scrolling {
+    width: calc(var(--topnav-img-width) * 0.95);
+    height: calc(var(--topnav-img-height) * 0.95);
+}
+
+.top {
+    width: var(--topnav-img-width);
+    height: var(--topnav-img-height);
+}
+
+@media only screen and (max-width: 720px) {
+    .scrolling {
+        width: calc(var(--topnav-img-width) * 0.65);
+        height: calc(var(--topnav-img-height) * 0.65);
+    }
+
+    .top {
+        width: calc(var(--topnav-img-width) * 0.75);
+        height: calc(var(--topnav-img-height) * 0.75);
+    }  
 }
