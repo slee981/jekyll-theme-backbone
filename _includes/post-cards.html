@@ -1,0 +1,28 @@
+{% if paginator %}
+    {% assign posts = paginator.posts %}
+{% else %}
+    {% assign posts = site.posts %}
+{% endif %}
+
+{% for post in posts %}
+    <div class="card m-3">
+        <a class="card-full" href="{{ post.url | relative_url }}">
+            <div class="card-body">
+                <h5 class="card-title">{{ post.title }}</h5>
+
+                <p class="card-text">
+                    {% if post.description %}
+                        {{ post.description }}
+                    {% else %}
+                        {{ post.content | strip_html | truncatewords: 50 }}
+                    {% endif %}
+                </p>
+            </div>
+
+            <div class="card-footer text-muted">
+                Posted: <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date_to_string }}</time>
+            </div>
+        </a>
+    </div>
+{% endfor %}
+

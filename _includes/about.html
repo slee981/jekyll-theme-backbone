@@ -1,0 +1,15 @@
+<div class="card mt-3 info-card">
+    <div class="card-body">
+    <h2 class="card-title">About</h2>
+    {% if site.about %}
+        <p class="card-text">
+        {{ site.about }}
+        </p>
+    {% else %}
+        <p class="card-text">
+        This is my blog, powered by Jekyll and Cadre!
+        </p>
+    {% endif %}
+    </div>
+    <img class="card-img-bottom about-img" src="{{ site.about_img_url | relative_url }}" alt="Site image">
+</div>

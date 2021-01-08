@@ -1,0 +1,25 @@
+{% if paginator %}
+<div class="d-flex justify-content-around px-3">
+        {% if paginator.previous_page %}
+            <a class="" href="{{ paginator.previous_page_path | prepend: relative_url }}">
+                <i class="fa fa-arrow-left" aria-hidden="true"></i>
+            </a>
+        {% else %}
+            <span class="">
+                <i class="fa fa-arrow-left" aria-hidden="true"></i>
+            </span>
+        {% endif %}
+
+        <p>More</p>
+
+        {% if paginator.next_page %}
+            <a class="" href="{{ paginator.next_page_path | relative_url }}">
+                <i class="fa fa-arrow-right" aria-hidden="true"></i>
+            </a>
+        {% else %}
+            <span class="">
+                <i class="fa fa-arrow-right" aria-hidden="true"></i>
+            </span>
+        {% endif %}
+</div>
+{% endif %}
