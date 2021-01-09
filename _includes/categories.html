@@ -1,0 +1,18 @@
+<div class="card info-card sticky-div mt-2">
+
+  <div class="card-body">
+
+    <h3 class="card-title">Categories</h3>
+    <ul class="list-unstyled">
+      {% for category in site.categories %}
+          {% capture category_name %}
+              {{ category | first }}
+          {% endcapture %}
+          <li class="card-text">
+            <a class="card-link" href="{{ post.url | relative_url }}">{{ category_name }}</a>
+          </li>
+      {% endfor %}
+    </ul>
+
+  </div>
+</div>

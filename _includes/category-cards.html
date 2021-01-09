@@ -1,0 +1,25 @@
+{% for category in site.categories %}
+    <div class="card my-2 mx-3">
+        <div class="card-body p-5">
+            {% capture category_name %}
+                {{ category | first }}
+            {% endcapture %}
+            <h3 class="card-title">{{ category_name }}</h3>
+
+            <!-- <p class="card-text">
+                {% if post.description %}
+                    {{ post.description }}
+                {% else %}
+                    {{ post.content | strip_html | truncatewords: 50 }}
+                {% endif %}
+            </p> -->
+
+            <!-- <p class="card-text read-more">
+                <a href="{{ post.url | relative_url }}">
+                    Read more <i class="fa fa-xs fa-hover fa-chevron-right" aria-hidden="true"></i>
+                </a>
+            </p> -->
+        </div>
+    </div>
+{% endfor %}
+

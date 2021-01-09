@@ -60,3 +60,10 @@ h3 {
 .info-card {
   padding: 10px 15px;
 }
+
+.sticky-div {
+  position: -webkit-sticky !important;
+  position: sticky !important;
+  top: calc(var(--top-nav-space) + var(--sticky-div-pad)) !important; 
+}
+

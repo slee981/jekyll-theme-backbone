@@ -1,12 +1,14 @@
-<div class="card info-card mt-2">
-    <div class="card-body">
-      <h3 class="card-title">Recent Posts</h3>
-      <ul class="list-unstyled">
-        {% for post in site.posts limit:3 %}
-          <li class="card-text">
-            <a class="card-link" href="{{ post.url | relative_url }}">{{ post.title }}</a>
-          </li>
-        {% endfor %}
-      </ul>
-    </div>
+<div class="card info-card sticky-div mt-2">
+
+  <div class="card-body">
+
+    <h3 class="card-title">Recent Posts</h3>
+    <ul class="list-unstyled">
+      {% for post in site.posts limit:3 %}
+        <li class="card-text">
+          <a class="card-link" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
 </div>
