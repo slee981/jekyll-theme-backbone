@@ -1,5 +1,5 @@
 .katex-display {
-  background-color: rgb(255, 251, 244);
+  background-color: var(--math-bg);
   overflow-x: auto;
   overflow-y: visible;
 }
@@ -13,7 +13,6 @@
 }
 
 .highlighter-rouge {
-  // color: var(--oc-red-8);
   color: var(--oc-black-5);
 }
 

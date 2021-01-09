@@ -1,31 +1,24 @@
 .toc-title {
-  margin: 0;
+  font-size: 16px;
   text-align: left;
-  // border: 1px solid var(--border-color);
-  // border-top-left-radius: var(--border-radius);
-  // border-top-right-radius: var(--border-radius);
-  padding: .2em;
-  // background-color: var(--code-bg);
 }
 
 .toc-div {
   position: -webkit-sticky !important;
   position: sticky !important;
-  top: 100px !important; 
+  top: calc(var(--top-nav-space) + var(--sticky-div-pad)) !important; 
 }
 
 .toc,
 .toc ul {
+  font-size: 12px;
   list-style: none;
-  margin: 0;
   padding: 0;
 }
 
 .toc {
   max-height: 80vh;
   overflow-y: scroll;
-  margin-left: 0;
-  // border: 1px solid var(--border-color);
   border-top: 0;
   border-bottom: 0;
   border-bottom-left-radius: var(--border-radius);
@@ -33,7 +26,6 @@
 
   a {
     display: block;
-    // border-bottom: 1px solid var(--border-color);
     text-decoration: none;
 
     color: inherit;
@@ -41,9 +33,11 @@
     &:hover,
     &:focus {
       font-weight: bold;
-      // background-color: var(--border-color);
+      color: var(--link-hover-color);
     }
   }
+
+  // indentations 
 
   li > a {
     padding-left: .5em;

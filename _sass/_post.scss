@@ -1,5 +1,10 @@
 .post {
     padding-right: 25px;
+    background-color: var(--post-bg);
+}
+
+.post-body {
+    background-color: inherit;
 }
 
 .post-header {
@@ -9,6 +14,8 @@
 .footnotes {
   overflow: auto;
   word-wrap: break-word;
+  border-top: 1px solid lightgrey;
+  padding-top: 25px; 
 }
 
 hr {

@@ -1,4 +1,59 @@
+body {
+  background-color: var(--body-bg) !important;
+}
+
+a {
+  color: var(--link-color) !important;
+  text-decoration: none !important;
+  &:hover, 
+  &:focus {
+    color: var(--link-hover-color) !important;
+    font-weight: bold !important;
+    transition: all 0.25s ease-in-out;
+  }
+}
+
 img {
-    max-width: 100%;
-    max-height: 100%;
+  max-width: 90%;
+  max-height: 90%;
+}
+
+h1 {
+  padding: 10px 0;
+}
+
+h2 {
+  padding: 7px 0;
+}
+
+h3 {
+  padding: 5px 0;
+}
+
+.fa-hover {
+  &:hover, 
+  &:focus {
+    transform: scale(1.1) !important;
+  }
+}
+
+.card {
+  background-color: var(--card-bg) !important;
+}
+
+.card-text a {
+  color: var(--link-color);
+}
+
+.container {
+  padding: var(--top-nav-space) 0;
+  margin: var(--top-nav-space) 0;
+}
+
+.list-unstyled {
+  padding-left: 10px !important;
+}
+
+.info-card {
+  padding: 10px 15px;
 }

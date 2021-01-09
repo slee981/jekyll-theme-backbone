@@ -2,9 +2,13 @@
     transition: all 0.5s ease-in-out;
 }
 
+#menu {
+    background-color: var(--nav-bg);
+}
+
 .scrolling {
-    width: calc(var(--topnav-img-width) * 0.95);
-    height: calc(var(--topnav-img-height) * 0.95);
+    width: calc(var(--topnav-img-width) * 0.90);
+    height: calc(var(--topnav-img-height) * 0.90);
 }
 
 .top {
@@ -14,12 +18,12 @@
 
 @media only screen and (max-width: 720px) {
     .scrolling {
-        width: calc(var(--topnav-img-width) * 0.65);
-        height: calc(var(--topnav-img-height) * 0.65);
+        width: calc(var(--topnav-img-width) * 0.55);
+        height: calc(var(--topnav-img-height) * 0.55);
     }
 
     .top {
-        width: calc(var(--topnav-img-width) * 0.75);
-        height: calc(var(--topnav-img-height) * 0.75);
+        width: calc(var(--topnav-img-width) * 0.65);
+        height: calc(var(--topnav-img-height) * 0.65);
     }  
 }

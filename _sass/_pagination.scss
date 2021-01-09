@@ -3,6 +3,10 @@
   text-align: center;
 }
 
+.pagination-nav-inactive {
+  color: var(--oc-gray-6)
+}
+
 // Pagination items can be `span`s or `a`s
 .pagination-item {
   display: block;

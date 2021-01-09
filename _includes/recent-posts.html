@@ -1,11 +1,10 @@
-<div class="card mt-3 info-card">
+<div class="card info-card mt-2">
     <div class="card-body">
       <h2 class="card-title">Recent Posts</h2>
-      <ul>
+      <ul class="list-unstyled">
         {% for post in site.posts limit:3 %}
           <li class="card-text">
             <a class="card-link" href="{{ post.url | relative_url }}">{{ post.title }}</a>
-            <small><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date_to_string }}</time></small>
           </li>
         {% endfor %}
       </ul>

@@ -1,7 +1,7 @@
 <div class="footer-element">
     {% for social in site.data.social %}
         <a class="social-icon" href="{{ social.url }}" target="_blank">
-            <i class="{{ social.icon | default: 'fas fa-link' }}" title="{{ social.title }}"></i>
+            <i class="fa-hover {{ social.icon | default: 'fas fa-link' }}" title="{{ social.title }}"></i>
         </a>
     {% endfor %}
 </div>
