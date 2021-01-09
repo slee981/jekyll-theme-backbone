@@ -18,11 +18,7 @@
 
 .toc {
   max-height: 80vh;
-  overflow-y: scroll;
-  border-top: 0;
-  border-bottom: 0;
-  border-bottom-left-radius: var(--border-radius);
-  border-bottom-right-radius: var(--border-radius);
+  overflow-y: auto;
 
   a {
     display: block;

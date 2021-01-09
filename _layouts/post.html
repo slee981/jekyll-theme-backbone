@@ -4,16 +4,16 @@ layout: default
 
 <div class="post-body">
   <div class="row post-header">
-    <div class="col-sm-3">
+    <div class="col-sm-2">
     </div>
 
-    <div class="col-sm-9">
+    <div class="col-sm-10">
       <h1 class="post-title">{{ page.title }}</h1>
       <div class="post-meta">
 
         {% if page.author %}
           {% for author in page.author %}
-            <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <span class="post-metadata" itemprop="author" itemscope itemtype="http://schema.org/Person">
               {{ author }} -
             </span>
             {% if forloop.last == false %}, {% endif %}
@@ -21,11 +21,13 @@ layout: default
         {% endif %}
 
         {% assign date_format = site.date_format | default: "%b %d, %Y" %}
-        <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: date_format }}</time>
+        <time class="post-metadata" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+          {{ page.date | date: date_format }}
+        </time>
         {% if page.last_modified_at %}
-          <span> ~ </span>
+          <span class="post-metadata"> ~ </span>
           {% assign mdate = page.last_modified_at | date_to_xmlschema %}
-          <time datetime="{{ mdate }}" itemprop="dateModified">
+          <time class="post-metadata" datetime="{{ mdate }}" itemprop="dateModified">
             {{ mdate | date: date_format }}
           </time>
         {% endif %}
