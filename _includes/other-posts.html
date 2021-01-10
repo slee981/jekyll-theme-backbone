@@ -12,16 +12,13 @@
     </ul>
 
     <h3 class="card-title text-center">Categories</h3>
-    <ul class="list-unstyled">
+    <div class="category-tags justify-content-center px-5">
       {% for category in site.categories %}
-          {% assign category_name = category | first %}
-          <li class="card-text text-center">
-            <a class="card-link" href="{{ 'categories.html' | anchor_ref: category_name | relative_url }}">
-              {{ category_name | capitalize_all }}
-            </a>
-          </li>
+        {% assign category_name = category | first %}
+        <a href="{{ 'categories.html' | anchor_ref: category_name | relative_url }}">
+          {{ category_name | capitalize_all }}
+        </a>
       {% endfor %}
-    </ul>
-
+    </div>
   </div>
 </div>

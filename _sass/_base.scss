@@ -80,3 +80,20 @@ a.jump-to-anchor {
   top: calc(-1 * (var(--top-nav-space) + var(--sticky-div-pad)));
   visibility: hidden;
 }
+
+.category-tags {
+  text-align: center;
+}
+
+.category-tags a {
+  display: inline-block;
+  border: 1px solid var(--oc-gray-6);
+  border-radius: 999em;
+  line-height: 24px;
+  font-size: 12px;
+  padding: 0 10px;
+  &:hover, 
+  &:focus {
+    border-color: var(--site-primary);
+  }
+}
