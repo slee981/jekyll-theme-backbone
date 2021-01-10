@@ -59,6 +59,13 @@ h3 {
 
 .info-card {
   padding: 10px 15px;
+  margin: 0 10px !important;
+}
+
+@media only screen and (max-width: $md) {
+  .info-card {
+    margin: 0 0 !important;
+  }
 }
 
 .sticky-div {

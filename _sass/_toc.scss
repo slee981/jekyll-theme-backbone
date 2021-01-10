@@ -9,6 +9,12 @@
   top: calc(var(--top-nav-space) + var(--sticky-div-pad)) !important; 
 }
 
+@media only screen and (min-width: $md) {
+  .toc-div {
+    padding-left: 10px;
+  }
+}
+
 .toc,
 .toc ul {
   font-size: 12px;

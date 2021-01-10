@@ -16,7 +16,7 @@
     height: var(--navbar-img-height);
 }
 
-@media only screen and (max-width: 720px) {
+@media only screen and (max-width: $md) {
     .scrolling {
         width: calc(var(--navbar-img-width) * 0.55);
         height: calc(var(--navbar-img-height) * 0.55);

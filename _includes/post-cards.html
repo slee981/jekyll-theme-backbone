@@ -7,9 +7,9 @@
 {% for post in posts %}
     <div class="card my-2 mx-3">
         <div class="card-body p-5">
-            <h3 class="card-title">{{ post.title }}</h3>
+            <h3 class="card-title text-center">{{ post.title }}</h3>
 
-            <p class="card-text">
+            <p class="card-text text-center">
                 {% if post.description %}
                     {{ post.description }}
                 {% else %}
@@ -17,7 +17,7 @@
                 {% endif %}
             </p>
 
-            <p class="card-text read-more">
+            <p class="card-text text-center read-more">
                 <a href="{{ post.url | relative_url }}">
                     Read more <i class="fa fa-xs fa-hover fa-chevron-right" aria-hidden="true"></i>
                 </a>

@@ -1,11 +1,11 @@
-<div class="card info-card sticky-div h-100 m-5">
+<div class="card info-card sticky-div h-100">
 
-  <div class="card-body p-5">
+  <div class="card-body">
 
-    <h3 class="card-title">Recent Posts</h3>
+    <h3 class="card-title text-center">Recent Posts</h3>
     <ul class="list-unstyled">
       {% for post in site.posts limit: 5 %}
-        <li class="card-text">
+        <li class="card-text text-center">
           <a class="card-link" href="{{ post.url | relative_url }}">{{ post.title }}</a>
         </li>
       {% endfor %}

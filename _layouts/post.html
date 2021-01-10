@@ -5,12 +5,9 @@ layout: default
 <script src="{{ 'assets/js/adjustAnchorLink.js' | relative_url }}"></script>
 <div class="post-body">
   <div class="row post-header">
-    <div class="col-sm-2">
-    </div>
-
-    <div class="col-sm-10">
-      <h1 class="post-title">{{ page.title }}</h1>
-      <div class="post-meta">
+    <div class="col">
+      <h1 class="post-title text-center">{{ page.title }}</h1>
+      <div class="post-meta text-center">
 
         {% if page.author %}
           {% for author in page.author %}
@@ -44,25 +41,28 @@ layout: default
     </div>
 
     <!-- MAIN POST -->
-    <div class="col-sm-10 post pt-3">
+    <div class="col-sm-10 post pt-3 pl-4">
         {{ content }}
     </div>
   </div>
 
-  <div class="row p-3">
+  <div class="d-flex justify-content-center pt-5">
+    <h2>More</h2>
+  </div>
+
+  <div class="row pt-5">
     <div class="col-sm-6">
       {% include recent-posts.html %}
     </div>
     <div class="col-sm-6">
       {% include categories.html %}
     </div>
-
   </div>
 
-  <div class="row">
-    {% if jekyll.environment == "production" and site.disqus and page.comments != false %}
+  {% if jekyll.environment == "production" and site.disqus and page.comments != false %}
+    <div class="row">
       {% include disqus.html %}
-    {% endif %}
-  </div>
+    </div>
+  {% endif %}
       
 </div>

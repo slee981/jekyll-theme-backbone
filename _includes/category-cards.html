@@ -3,11 +3,11 @@
         <div class="card-body p-5">
             {% assign category_name = category | first %}
             <a class="jump-to-anchor" id="{{ category_name }}"></a>
-            <h3 class="card-title">{{ category_name | capitalize_all }}</h3>
+            <h3 class="card-title text-center">{{ category_name | capitalize_all }}</h3>
 
             {% for post in site.categories[category_name] %}
                 {% if post.title %}
-                    <p class="card-text">
+                    <p class="card-text text-center">
                         <a href="{{ post.url | relative_url }}">
                             {{ post.title }}
                             <i class="fa fa-xs fa-hover fa-chevron-right" aria-hidden="true"></i>
