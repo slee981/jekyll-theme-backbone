@@ -14,11 +14,11 @@
     <h3 class="card-title">Categories</h3>
     <ul class="list-unstyled">
       {% for category in site.categories %}
-          {% capture category_name %}
-              {{ category | first }}
-          {% endcapture %}
+          {% assign category_name = category | first %}
           <li class="card-text">
-            <a class="card-link" href="{{ post.url | relative_url }}">{{ category_name }}</a>
+            <a class="card-link" href="{{ 'categories.html' | anchor_ref: category_name | relative_url }}">
+              {{ category_name | capitalize_all }}
+            </a>
           </li>
       {% endfor %}
     </ul>

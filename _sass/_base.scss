@@ -67,3 +67,9 @@ h3 {
   top: calc(var(--top-nav-space) + var(--sticky-div-pad)) !important; 
 }
 
+a.jump-to-anchor {
+  display: block;
+  position: relative;
+  top: calc(-1 * (var(--top-nav-space) + var(--sticky-div-pad)));
+  visibility: hidden;
+}

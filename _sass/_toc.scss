@@ -24,12 +24,12 @@
     display: block;
     text-decoration: none;
 
-    color: inherit;
+    color: var(--toc-text-color) !important;
 
     &:hover,
     &:focus {
       font-weight: bold;
-      color: var(--link-hover-color);
+      color: var(--link-hover-color) !important;
     }
   }
 
