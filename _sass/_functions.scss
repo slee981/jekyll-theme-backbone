@@ -1,9 +1,0 @@
-@mixin alternative-link-style() {
-  color: inherit;
-
-  &:hover,
-  &:focus {
-    color: var(--link-color);
-    text-decoration: none;
-  }
-}
