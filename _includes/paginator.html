@@ -1,7 +1,7 @@
 {% if paginator %}
 <div class="d-flex justify-content-around px-3">
         {% if paginator.previous_page %}
-            <a class="pagination-nav-active" href="{{ paginator.previous_page_path | prepend: relative_url }}">
+            <a class="pagination-nav-active" href="{{ paginator.previous_page_path | relative_url }}">
                 <i class="fa fa-arrow-left" aria-hidden="true"></i>
             </a>
         {% else %}
