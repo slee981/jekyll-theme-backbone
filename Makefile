@@ -3,7 +3,7 @@ NAME=jekyll-theme-cadre
 start: 
 	bundle exec jekyll serve
 
-publish-gem: cleanup build publish 
+gem: cleanup build publish 
 
 build: cleanup 
 	gem build $(NAME).gemspec
