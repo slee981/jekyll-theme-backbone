@@ -15,8 +15,8 @@
       <h3 class="card-title text-center">Categories</h3>
       <div class="category-tags d-flex flex-wrap justify-content-center px-5">
         {% for category in site.categories %}
-          {% assign category_name = category | first | slugify %}
-          {% capture anchor_url %}categories.html#{{ category_name }}{% endcapture %}
+          {% assign category_name = category | first %}
+          {% capture anchor_url %}categories.html#{{ category_name | slugify }}{% endcapture %}
           <a class="card-link my-1 py-2 px-3" href="{{ anchor_url | relative_url }}">
             {{ category_name | capitalize }}
           </a>
