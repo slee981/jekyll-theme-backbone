@@ -1,12 +1,15 @@
-NAME=jekyll-theme-cadre 
+NAME=jekyll-theme-cadre
 
 start: 
 	bundle exec jekyll serve
 
-publish-gem: cleanup
+publish-gem: cleanup build publish 
+
+build: cleanup 
 	gem build $(NAME).gemspec
-	GEMFILE=$(ls *.gem)
-	gem push $(GEMFILE)
+
+publish: 
+	gem push $(shell ls *.gem)
 
 cleanup: 
 	rm -f *.gem
