@@ -33,9 +33,32 @@ paginate: 3
 exclude_powered_by: false
 
 # Build settings
-theme: jekyll-theme-cadre
 plugins:
   - jekyll-feed
+  - jekyll-paginate
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-remote-theme
+
+remote_theme: slee981/jekyll-theme-cadre
+
+include:
+  - _pages
+
+# Optimize Jekyll
+exclude:
+  - .editorconfig
+  - .git
+  - .jekyll-cache
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - README.md
+  - scripts/
+
+sass:
+  sass_dir: _sass
+  style: :compressed
 
 # Exclude from processing.
 # The following items will not be processed, by default.
