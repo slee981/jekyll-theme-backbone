@@ -11,6 +11,4 @@ _config.yml
 _posts
 _data
 assets/images
-
-# allow archive and categories page by default
-index.html
+./*.html

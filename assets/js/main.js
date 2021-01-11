@@ -29,3 +29,4 @@ function scrollFunction() {
     logo.className = logo.className.replace(/scrolling/, 'top');
   }
 }
+

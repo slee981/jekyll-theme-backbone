@@ -2,7 +2,12 @@
 layout: default
 ---
 
+<!-- jquery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
 <script src="{{ 'assets/js/adjustAnchorLink.js' | relative_url }}"></script>
+<script src="{{ 'assets/js/liveTOCScroll.js' | relative_url }}"></script>
+
 <div class="post-body">
   <div class="row post-header">
     <div class="col">
@@ -41,7 +46,7 @@ layout: default
     </div>
 
     <!-- MAIN POST -->
-    <div class="col-sm-10 post pt-3 pl-4">
+    <div class="col-sm-10 post p-4">
         {{ content }}
     </div>
   </div>

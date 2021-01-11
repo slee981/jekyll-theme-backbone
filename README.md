@@ -13,8 +13,7 @@ This is a fork of the excellent [scaffold theme](https://github.com/sziv2p/jekyl
 - Pagination, via [`jekyll-paginate`](https://rubygems.org/gems/jekyll-paginate)
 - TOC, via [`jekyll-toc`](https://github.com/allejo/jekyll-toc)
 - [Jekyll Feed](https://github.com/jekyll/jekyll-feed/)
-- [Jekyll SEO Tag](https://github.com/jekyll/jekyll-seo-tag/)
-- [Jekyll Sitemap](https://github.com/jekyll/jekyll-sitemap/)
+- [Jekyll SEO Tag](https://github.com/jekyll/jekyll-seo-tag/) - [Jekyll Sitemap](https://github.com/jekyll/jekyll-sitemap/)
 - [Google Analytics](https://analytics.google.com/)
 - [Disqus](https://disqus.com/)
 - [MathJax](https://www.mathjax.org/)
@@ -105,31 +104,6 @@ The main usage of this theme is described in detail below. If you find the docum
 | `google_analytics` | String | --- | Google Analytics tracking ID |
 | `disqus` | String | --- | Disqus short name |
 
-Additionally, `Cadre` is designed for flexibility. To change your `css` settings, create a file called `_sass/_variables.scss` and override the following: 
-
-```scss
-/* ./_sass/_variables.scss */
-
-// navbar logo image size
---navbar-img-height: 45px; 
---navbar-img-width: 275px; 
-
-// colors
---site-primary: rgb(253, 194, 0);
---site-secondary: rgb(185, 2, 2);
---site-tertiary: var(--oc-gray-6);
---tan: rgb(255, 246, 231);
---beige: rgb(255, 248, 238);
-
---nav-bg: var(--oc-gray-1);
---body-bg: var(--oc-gray-0);
---footer-bg: var(--oc-gray-1);
---card-bg: var(--oc-white);
---code-bg: var(--oc-gray-1);
---post-bg: var(--oc-white);
---math-bg: var(--beige);
-```
-
 ### Post Configuration
 
 | Variable | Type | Default | Specification |
@@ -152,22 +126,6 @@ layout: home
 ---
 ```
 
-### Categories
-
-By default, `Cadre` comes built in with pages for `categories.html` and `archive.html`. To use: 
-
-1. Create a `_data/navigation.yml` file with the contents shown below. 
-2. Denote categories in your post with metadata in the header: 
-    ```html
-    ---
-    <!-- ./_posts/2021-01-08-example-post.md -->
-
-    layout: post 
-    categories: [General, Tools]
-    ...
-    ---
-    ```
-
 ### Navigation
 
 You can configure the navigation of the website by creating a file `_data/navigation.yml` in your repository, and put some data such as below into it. By default, this theme comes with pages for `catgories.html` and `archive.html`.
@@ -181,6 +139,48 @@ You can configure the navigation of the website by creating a file `_data/naviga
 - name: Archive
   link: archive.html 
 ```
+
+### Archive
+
+Cadre supports built-in archive pages. If you want to archive posts by years, you can create a page named `./archive.html` and put the following code in it: 
+
+```yml
+---
+title: Archive
+layout: archive
+type: years
+permalink: archive.html
+---
+```
+
+### Categories
+
+By default, `Cadre` supports category tracking and searching. **It is highly recommended to add this page**, as category tracking widgets are supported by default. To use: 
+
+1. Create a `_data/navigation.yml` file with the contents shown above. 
+2. Denote categories in your post with metadata in the header: 
+    ```html
+    ---
+    <!-- ./_posts/2021-01-08-example-post.md -->
+
+    layout: post 
+    categories: [General, Tools]
+    ...
+    ---
+    ```
+3. Create a page `archive.html` in the root directory. Similar to the archive setup, create the file:
+    ```html
+    ---
+    <!-- ./archive.html -->
+
+    title: Categories 
+    layout: archive 
+    type: categories 
+    permalink: categories.html
+    ---
+    ```
+
+Similarly, if you want to archive posts by tags, you can set the `type` property as `tags`.
 
 ### Social Links
 
@@ -200,21 +200,6 @@ Scaffold allows you to show social links on the website, all you need to do is c
 ```
 
 The `icon` property means a [Font Awesome](https://fontawesome.com/) class, and you can select any one you like.
-
-### Archive
-
-Pure provides some built-in archive pages. It is implemented in pure Liquid. If you want to archive posts by years, you can create a page and put these code in it:
-
-```yml
----
-layout: archive
-type: years
----
-```
-
-This is created for you by default for years (called `archive.html`) and for categories (called `categories.html`). 
-
-Similarly, if you want to archive posts by categories or tags, you can set the `type` property as `tags`.
 
 ### Custom Head
 

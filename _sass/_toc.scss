@@ -20,11 +20,15 @@
   max-height: 80vh;
   overflow-y: auto;
 
+  a.active {
+    color: var(--site-secondary);
+  }
+
   a {
     display: block;
     text-decoration: none;
 
-    color: var(--toc-text-color) !important;
+    color: var(--toc-text-color);
 
     &:hover,
     &:focus {
