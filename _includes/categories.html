@@ -7,9 +7,10 @@
       {% if site.categories.size > 0 %}
         <div class="category-tags d-flex flex-wrap justify-content-center">
           {% for category in site.categories %}
-            {% assign category_name = category | first %}
-            <a class="card-link my-2 py-2 px-3" href="{{ 'categories.html' | anchor_ref: category_name | relative_url }}">
-              {{ category_name | capitalize_all }}
+            {% assign category_name = category | first | slugify %}
+            {% capture anchor_url %}categories.html#{{ category_name }}{% endcapture %}
+            <a class="card-link my-2 py-2 px-3" href="{{ anchor_url | relative_url }}">
+              {{ category_name | capitalize }}
             </a>
           {% endfor %}
         </div>

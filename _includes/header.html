@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg fixed-top navbar-light py-4" id="menu">
 
   <!-- BRAND LOGO OR NAME -->
-  <a class="navbar-brand" id="site-logo" href="/">
+  <a class="navbar-brand" id="site-logo" href="{{ '/' | relative_url }}">
   {% if site.navbar_img %}
     <img class="navbar-brand-img top" src="{{ site.navbar_img | relative_url }}" alt="">
   {% elsif site.title %}

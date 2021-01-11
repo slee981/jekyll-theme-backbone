@@ -22,12 +22,13 @@
       {%- assign posts = taxonomy[1] -%}
       {%- assign link = page.permalink -%}
       {%- if posts.size == i -%}
-        <a class="card-link my-2 px-3 py-2" href="{{ link | anchor_ref: slugified_taxonomy_name | relative_url }}">
+        {% capture anchor_url %}{{ link }}#{{ slugified_taxonomy_name }}{% endcapture %}
+        <a class="card-link my-2 px-3 py-2" href="{{ anchor_url | relative_url }}">
           <span>
             {%- if page.type == 'tags' -%}
               {{ slugified_taxonomy_name }}
             {%- else -%}
-              {{ taxonomy_name | capitalize_all }}
+              {{ taxonomy_name | capitalize }}
             {%- endif -%}
           </span>&nbsp;&nbsp;
           <span class="taxonomy-count">{{ posts.size }}</span>
@@ -51,7 +52,7 @@
               {%- if page.type == 'tags' -%}
                 {{ slugified_taxonomy_name }}
               {%- else -%}
-                {{ taxonomy_name | capitalize_all }}
+                {{ taxonomy_name | capitalize }}
               {%- endif -%}
             </h2>
             

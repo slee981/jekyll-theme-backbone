@@ -3,7 +3,8 @@
 <div class="category-tags d-flex flex-wrap justify-content-center">
     {%- for taxonomy in taxonomies -%}
       {%- assign link = page.permalink -%}
-      <a class="card-link my-2 px-3 py-2" href="{{ link | anchor_ref: taxonomy.name | relative_url }}">
+      {% capture anchor_url %}{{ link }}#{{ taxonomy.name }}{% endcapture %}
+      <a class="card-link my-2 px-3 py-2" href="{{ anchor_url | relative_url }}">
         <span class="taxonomy-name">{{ taxonomy.name }}</span>&nbsp;&nbsp;
         <span class="taxonomy-count">{{ taxonomy.size }}</span>
       </a> 
