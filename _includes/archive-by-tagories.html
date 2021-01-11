@@ -15,6 +15,7 @@
 {%- endfor -%}
 
 <div class="category-tags d-flex flex-wrap justify-content-center">
+  <!-- TODO: clean this up, it's brutal -->
   {%- for i in (1..max_count) reversed -%}
     {%- for taxonomy in taxonomies -%}
       {%- assign taxonomy_name = taxonomy[0] -%}
@@ -23,13 +24,21 @@
       {%- assign link = page.permalink -%}
       {%- if posts.size == i -%}
         {% capture anchor_url %}{{ link }}#{{ slugified_taxonomy_name }}{% endcapture %}
+        {% if page.type == 'categories' %}
+          {% assign taxonomy_name_list = taxonomy_name | split: ' ' %}
+          {% capture capitalized_taxonomy_name %}
+            {% for word in taxonomy_name_list %}
+              {{ word | capitalize }}
+            {% endfor %}
+          {% endcapture %}
+        {% endif %}
         <a class="card-link my-2 px-3 py-2" href="{{ anchor_url | relative_url }}">
           <span>
-            {%- if page.type == 'tags' -%}
+            {% if page.type == 'tags' %}
               {{ slugified_taxonomy_name }}
-            {%- else -%}
-              {{ taxonomy_name | capitalize }}
-            {%- endif -%}
+            {% else %}
+              {{ capitalized_taxonomy_name }}
+            {% endif %}
           </span>&nbsp;&nbsp;
           <span class="taxonomy-count">{{ posts.size }}</span>
         </a>
@@ -48,11 +57,19 @@
         <div class="card my-2 mx-3">
           <div class="card-body p-5">
             <a class="jump-to-anchor" id="{{ slugified_taxonomy_name }}"></a>
+            {% if page.type == 'categories' %}
+              {% assign taxonomy_name_list = taxonomy_name | split: ' ' %}
+              {% capture capitalized_taxonomy_name %}
+                {% for word in taxonomy_name_list %}
+                  {{ word | capitalize }}
+                {% endfor %}
+              {% endcapture %}
+            {% endif %}
             <h2 class="card-title" id="{{ slugified_taxonomy_name }}">
               {%- if page.type == 'tags' -%}
                 {{ slugified_taxonomy_name }}
               {%- else -%}
-                {{ taxonomy_name | capitalize }}
+                {{ capitalized_taxonomy_name }}
               {%- endif -%}
             </h2>
             
