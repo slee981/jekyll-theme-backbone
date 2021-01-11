@@ -1,29 +1,13 @@
 # Cadre <!-- omit in toc -->
 
-<a href="https://jekyll-themes.com">
-  <img src="https://img.shields.io/badge/featured%20on-JekyllThemes-red.svg" height="20" alt="Jekyll Themes Shield" >
-</a>
+Cadre is a responsive, modern Jekyll theme for bloggers. This theme is designed to come with good defaults including an archive and categories page. 
 
-Scaffold is a *minimalist Jekyll theme for bloggers with Bootstrap and KaTex.
-
-According to [Merriam-Webster](https://www.merriam-webster.com/), a *scaffold* is
-
-> a temporary or movable platform for workers (such as bricklayers, painters, or miners) to stand or sit on when working at a height above the floor or ground
-
-So is the target of the Jekyll theme Scaffold. It doesn't need to be modern, colorful, or beautiful; It just needs to be **simple**, **proper**, **naked**, and **neat**.
-
-Scaffold is empirical. Standing on it, you -- the blogger -- can build a great building based on your words.
-
-*Check the [live demo](https://sziv2p.github.io/jekyll-theme-scaffold/).*
-
-![Screenshot Light](screenshot-light.png)
-![Screenshot Dark](screenshot-dark.png)
+This is a fork of the excellent [scaffold theme](https://github.com/sziv2p/jekyll-theme-scaffold), redesigned with Bootstrap and added KaTex support for improved mathematical typesetting.
 
 ## Features (Not a Complete List) <!-- omit in toc -->
 
-- [Normalize.css](http://necolas.github.io/normalize.css/)
+- [Bootstrap](https://getbootstrap.com/)
 - [Open Color](https://yeun.github.io/open-color/)
-- Dark mode, via [`prefers-color-scheme`](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme)
 - [Font Awesome](https://fontawesome.com/)
 - Archive implemented by pure Liquid
 - Pagination, via [`jekyll-paginate`](https://rubygems.org/gems/jekyll-paginate)
@@ -34,6 +18,7 @@ Scaffold is empirical. Standing on it, you -- the blogger -- can build a great b
 - [Google Analytics](https://analytics.google.com/)
 - [Disqus](https://disqus.com/)
 - [MathJax](https://www.mathjax.org/)
+- [Katex](https://katex.org/)
 
 ## Table of Contents <!-- omit in toc -->
 
@@ -55,51 +40,62 @@ Scaffold is empirical. Standing on it, you -- the blogger -- can build a great b
 Add this line to your Jekyll site's `Gemfile`:
 
 ```ruby
-gem "jekyll-theme-scaffold"
+# Gemfile
+
+gem "jekyll-theme-cadre"
 ```
 
 And add this line to your Jekyll site's `_config.yml`:
 
 ```yaml
-theme: jekyll-theme-scaffold
+# _config.yml
+
+theme: jekyll-theme-cadre
 ```
 
 And then execute:
 
-    bundle
+```bash
+$ bundle
+```
 
 Or install it yourself as:
 
-    gem install jekyll-theme-scaffold
+```bash
+$ gem install jekyll-theme-cadre
+```
 
 If you want to use this theme on GitHub Pages, you can do that via `jekyll-remote-theme`:
 
 1. Import `jekyll-remote-theme` in your `Gemfile`:
 
     ```ruby
+    # Gemfile 
+
     gem "jekyll-remote-theme"
     ```
 
 2. Add these lines to your `_config.yml`:
 
     ```yml
+    # _config.yml
+
     plugins:
       - jekyll-remote-theme
 
-    remote_theme: sziv2p/jekyll-theme-scaffold
+    remote_theme: slee981/jekyll-theme-cadre
     ```
 
 ## Usage
 
-The main usage of this theme is described in detail below. If you find the document difficult to understand or not specific enough, you can also use the [`gh-pages`](https://github.com/sziv2p/jekyll-theme-scaffold/tree/gh-pages) branch of this repository as an example to learn how to use this theme.
+The main usage of this theme is described in detail below. If you find the document difficult to understand or not specific enough, you can also use the [`gh-pages`](https://github.com/slee981/jekyll-theme-cadre/tree/gh-pages) branch of this repository as an example to learn how to use this theme.
 
 ### Global Configuration
 
 | Variable | Type | Default | Specification |
 | -------- | ---- | ------- | ------------- |
 | `title` | String | --- | The title of the website |
-| `tagline` | String | --- | The tagline of the website |
-| `lang` | String | `en` | The language of pages; The value can be overwritten by the `lang` variable on each page |
+| `about` | String | --- | About you or about the blog |
 | `author.name` | String | --- | The name of the website author |
 | `author.url` | String | --- | A URL of the website author |
 | `date_format` | String | `%-d %b %Y` | The [date format](http://alanwsmith.com/jekyll-liquid-date-formatting-examples) which is used in many places on the website |
@@ -112,25 +108,44 @@ The main usage of this theme is described in detail below. If you find the docum
 | Variable | Type | Default | Specification |
 | -------- | ---- | ------- | ------------- |
 | `description` | String | --- | A description of the current post |
-| `last_modified_at` | String | --- | The date of the last modification you made on a post after its publishing |
 | `author` | String or Array | --- | The author name(s) of the post |
-| `math` | Boolean | `false` | Does enable MathJax on this page |
-| `comments` | Boolean | `true` | Does enable the Disqus comment system |
-| `toc` | Boolean | `false` | Does enable the TOC |
+| `mathjax` | Boolean | `false` | Enable MathJax on this page |
+| `katex` | Boolean | `false` | Enable KaTex on this page |
+| `comments` | Boolean | `true` | Enable the Disqus comment system |
+| `toc` | Boolean | `false` | Enable the TOC |
 
 ### Homepage
 
-You can create a homepage for your blog by setting `layout: home` in your `index.html`.
+You can create a homepage for your blog by setting `layout: home` in your `index.html`. No other code is needed.
+
+```html
+<!-- ./index.html -->
+---
+layout: home
+---
+```
+
+### Categories
+
+You can create a categories page for your blog by setting `layout: categories` in a file called `categories.html`.
+
+```html
+<!-- ./categories.html -->
+---
+layout: categories
+---
+```
 
 ### Navigation
 
 You can configure the navigation of the website by creating a file `_data/navigation.yml` in your repository, and put some data such as below into it.
 
 ```yml
-- title: About
-  url: /about/
-- title: Archive
-  url: /archive/
+# _data/navigation.yml
+- name: Home 
+  link: index.html
+- name: Categories 
+  link: categories.html 
 ```
 
 ### Social Links
@@ -138,14 +153,15 @@ You can configure the navigation of the website by creating a file `_data/naviga
 Scaffold allows you to show social links on the website, all you need to do is creating a file `_data/social.yml`, for example,
 
 ```yml
-- title: Email
-  url: mailto:sziv2p@gmail.com
+# _data/social.yml
+- name: Email
+  link: mailto:smlee.981@gmail.com
   icon: fas fa-envelope
-- title: Twitter
-  url: https://twitter.com/sziv2p
+- name: Twitter
+  link: https://twitter.com/slee981
   icon: fab fa-twitter
-- title: GitHub
-  url: https://github.com/sziv2p
+- name: GitHub
+  link: https://github.com/slee981
   icon: fab fa-github
 ```
 
@@ -166,11 +182,18 @@ Similarly, if you want to archive posts by categories or tags, you can set the `
 
 ### Custom Head
 
-Pure leaves a placeholder to allow defining custom head. All you need to do is putting data into `_includes/custom-head.html`, and they would be automatically included in `<head>`.
+You can insert custom code easily into the head by  creating a file `_includes/custom-head.html` and adding your code.
+
+```html
+<!-- ./_includes/custom-head.html -->
+<script>
+  console.log("This is my custom head");
+</script>
+```
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at [https://github.com/sziv2p/jekyll-theme-scaffold](https://github.com/sziv2p/jekyll-theme-scaffold). This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at [https://github.com/slee981/jekyll-theme-cadre](https://github.com/slee981/jekyll-theme-cadre). 
 
 ## Development
 
@@ -179,7 +202,11 @@ To set up your environment to develop this theme, run `bundle install`.
 Your theme is setup just like a normal Jekyll site! To test your theme, run `bundle exec jekyll serve` and open your browser at `http://localhost:4000`. This starts a Jekyll server using your theme. Add pages, documents, data, etc. like normal to test your theme's contents. As you make modifications to your theme and to your content, your site will regenerate and you should see the changes in the browser after a refresh, just like normal.
 
 When your theme is released, only the files in `_layouts`, `_includes`, `_sass` and `assets` tracked with Git will be bundled.
-To add a custom directory to your theme-gem, please edit the regexp in `jekyll-theme-scaffold.gemspec` accordingly.
+To add a custom directory to your theme-gem, please edit the regexp in `jekyll-theme-cadre.gemspec` accordingly.
+
+## Acknowledgment
+
+As mentioned above, this project is a fork of [https://github.com/sziv2p/jekyll-theme-scaffold](https://github.com/sziv2p/jekyll-theme-scaffold). As such, credit and appreciation goes to anyone who contributed to that project. Much of the "scaffolding" of this project was left untouched. 
 
 ## License
 

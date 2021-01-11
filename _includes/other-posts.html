@@ -11,14 +11,16 @@
       {% endfor %}
     </ul>
 
-    <h3 class="card-title text-center">Categories</h3>
-    <div class="category-tags justify-content-center px-5">
-      {% for category in site.categories %}
-        {% assign category_name = category | first %}
-        <a href="{{ 'categories.html' | anchor_ref: category_name | relative_url }}">
-          {{ category_name | capitalize_all }}
-        </a>
-      {% endfor %}
-    </div>
+    {% if site.categories.size > 0 %}
+      <h3 class="card-title text-center">Categories</h3>
+      <div class="category-tags d-flex flex-wrap justify-content-center px-5">
+        {% for category in site.categories %}
+          {% assign category_name = category | first %}
+          <a class="card-link my-1 py-2 px-3" href="{{ 'categories.html' | anchor_ref: category_name | relative_url }}">
+            {{ category_name | capitalize_all }}
+          </a>
+        {% endfor %}
+      </div>
+    {% endif %}
   </div>
 </div>

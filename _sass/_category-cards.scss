@@ -1,0 +1,10 @@
+.category-card-contents {
+    padding: 5px 15% !important;
+}
+
+@media only screen and (max-width: $md) {
+    .category-card-contents {
+        padding: 0 0 !important; 
+        text-align: center !important;
+    }
+}

@@ -1,32 +1,35 @@
 {% assign taxonomies = site.posts | group_by_exp: "post", "post.date | date: '%Y'" %}
 
-<div class="taxonomies-wrapper">
-  <ul class="taxonomies">
+<div class="category-tags d-flex flex-wrap justify-content-center">
     {%- for taxonomy in taxonomies -%}
-      <li>
-        {%- capture link -%}{{ page.permalink }}#{{ taxonomy.name }}{%- endcapture -%}
-        <a class="taxonomy" href="{{ link | relative_url }}">
-          <span>{{ taxonomy.name }}</span>
-          <span class="taxonomy-count">{{ taxonomy.size }}</span>
-        </a> 
-      </li>
+      {%- assign link = page.permalink -%}
+      <a class="card-link my-2 px-3 py-2" href="{{ link | anchor_ref: taxonomy.name | relative_url }}">
+        <span class="taxonomy-name">{{ taxonomy.name }}</span>&nbsp;&nbsp;
+        <span class="taxonomy-count">{{ taxonomy.size }}</span>
+      </a> 
     {%- endfor -%}
-  </ul>
 </div>
 
-{%- for taxonomy in taxonomies -%}
-  <h2 id="{{ taxonomy.name }}">{{ taxonomy.name }}</h2>
-  <ul class="post-list-by-taxonomy">
-    {%- assign posts = taxonomy.items -%}
-    {%- for post in posts -%}
-      <li>
-        <time datetime="{{ page.date | date_to_xmlschema }}">{{ post.date | date: "%Y-%m-%d" }}</time> 
-        &raquo;
-        <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
-      </li>
-    {%- endfor -%}
-  </ul>
-  <a href="#" onclick="backToTop()" class="back-to-top">Top &#8648;</a>
-{%- endfor -%}
+<div class="card-section mt-4">
+  {%- for taxonomy in taxonomies -%}
+    <div class="card my-2 mx-3">
+      <div class="card-body p-5">
+        <a class="jump-to-anchor" id="{{ taxonomy.name }}"></a>
+        <h2 class="card-title" id="{{ taxonomy.name }}">{{ taxonomy.name }}</h2>
+          {%- assign posts = taxonomy.items -%}
+          {%- for post in posts -%}
+            <p class="card-text card-list">
+              <time datetime="{{ page.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d" }}</time> 
+              &raquo;
+              <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+            </p>
+          {%- endfor -%}
+        <a href="#" onclick="backToTop()" class="back-to-top">
+          <i class="fas fa-lg fa-chevron-up"></i>
+        </a>
+      </div>
+    </div>
+  {%- endfor -%}
+</div>
 
 {% include back-to-top.html %}

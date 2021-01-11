@@ -1,5 +1,6 @@
 window.addEventListener("hashchange", () => {
-    // wait for anchor scroll to take effect
+    // wait for anchor scroll to settle where it thinks is correct
+    // without timeout, autoscroll takes effect too early
     setTimeout(onHashChange, 1000);
 });
 
@@ -7,6 +8,7 @@ window.addEventListener("hashchange", () => {
 function onHashChange() {
     // get height of navbar
     let menu = document.getElementById("menu");
+    // dynamically get menu height
     let menuStyle = getComputedStyle(menu);
     let menuHeight = parseInt(menuStyle.height);
     let pad = menuHeight + 10;

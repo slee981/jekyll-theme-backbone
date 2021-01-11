@@ -9,12 +9,6 @@
   top: calc(var(--top-nav-space) + var(--sticky-div-pad)) !important; 
 }
 
-@media only screen and (min-width: $md) {
-  .toc-div {
-    padding-left: 10px;
-  }
-}
-
 .toc,
 .toc ul {
   font-size: 12px;
@@ -55,5 +49,14 @@
   }
   ul li ul li ul li ul li > a {
     padding-left: 3.5em;
+  }
+}
+
+@media only screen and (max-width: $md) {
+  h3.toc-title {
+    text-align: center;
+  }
+  .toc {
+    padding-left: 15px !important;
   }
 }

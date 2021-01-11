@@ -5,6 +5,7 @@ require 'uri'
 module Jekyll
   module AnchorRef
     def anchor_ref(url, tag)
+      tag = tag.gsub ' ', '-'
       return url + '#' + tag
     end
   end

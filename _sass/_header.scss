@@ -1,5 +1,14 @@
+.navbar {
+    padding-left: 10%;  
+    padding-right: 10%;  
+}
+
 .navbar-brand-img {
     transition: all 0.5s ease-in-out;
+}
+
+.navbar-brand {
+    color: var(--site-primary) !important;
 }
 
 #menu {
@@ -14,6 +23,15 @@
 .top {
     width: var(--navbar-img-width);
     height: var(--navbar-img-height);
+}
+
+a.nav-link {
+    color: var(--site-tertiary);
+}
+
+.active {
+    color: var(--site-secondary) !important; 
+    font-weight: bold !important;
 }
 
 @media only screen and (max-width: $md) {

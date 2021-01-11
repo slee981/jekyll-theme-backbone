@@ -7,11 +7,17 @@
             </p>
         {% else %}
             <p class="card-text text-center">
-            This is my blog, powered by Jekyll and Cadre!
+                {% if site.description %}
+                    {{ site.description }}
+                {% else %}
+                    This is my blog, powered by Jekyll and Cadre!
+                {% endif %}
             </p>
         {% endif %}
     </div>
-    <div class="d-flex justify-content-center">
-        <img class="card-img-bottom p-4" src="{{ site.about_img_url | relative_url }}" alt="Site image">
-    </div>
+    {% if site.about_img %}
+        <div class="d-flex justify-content-center">
+            <img class="card-img-bottom p-4" src="{{ site.about_img | relative_url }}" alt="Site image">
+        </div>
+    {% endif %}
 </div>

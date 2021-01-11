@@ -1,9 +1,9 @@
-<nav class="navbar navbar-expand-lg fixed-top navbar-light py-4 px-5" id="menu">
+<nav class="navbar navbar-expand-lg fixed-top navbar-light py-4" id="menu">
 
   <!-- BRAND LOGO OR NAME -->
-  <a class="navbar-brand" href="/">
-  {% if site.site_logo %}
-    <img class="navbar-brand-img top" id="site-logo" src="{{ site.site_logo | relative_url }}" alt="">
+  <a class="navbar-brand" id="site-logo" href="/">
+  {% if site.navbar_img %}
+    <img class="navbar-brand-img top" src="{{ site.navbar_img | relative_url }}" alt="">
   {% elsif site.title %}
     {{ site.title }}
   {% else %}
@@ -13,6 +13,12 @@
   
   <!-- NAVIGATION -->
   {% if site.data.navigation %}
+    {% if page.url == "/" %}
+      {% assign current = 'index.html' %}
+    {% else %}
+      {% assign url_list = page.url | split: "/" %}
+      {% assign current = url_list[1] | strip %}
+    {% endif %}
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -20,7 +26,12 @@
     <div class="collapse navbar-collapse justify-content-end" id="navbarCollapse">
       <div class="navbar-nav">
       {% for item in site.data.navigation %}
-        <a class="nav-item nav-link" href="{{ item.link | relative_url }}">{{ item.name }}</a>
+        {% if item.link == current %}
+          {% assign active_status = 'active' %}
+        {% else %}
+          {% assign active_status = '' %}
+        {% endif %}
+        <a class="nav-item nav-link {{ active_status }}" href="{{ item.link | relative_url }}">{{ item.name }}</a>
       {% endfor %}
       </div>
     </div>
