@@ -21,8 +21,8 @@
 title: Cadre Demo
 email: smlee.981@gmail.com
 description: Cadre is the best static blogging theme that money can buy. 
-# url: https://stephenlee.info 
-# baseurl: /jekyll-theme-cadre
+url: https://stephenlee.info 
+baseurl: /jekyll-theme-cadre
 
 # Cadre settins
 about: Cadre is a responsive, modern Jekyll theme for bloggers. This theme is designed to come with good defaults including an archive and categories page "out of the box". 
