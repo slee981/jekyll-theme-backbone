@@ -1,0 +1,9 @@
+- name: Email
+  link: mailto:smlee.981@gmail.com
+  icon: fas fa-envelope
+- name: Twitter
+  link: https://twitter.com/slee981
+  icon: fab fa-twitter
+- name: GitHub
+  link: https://github.com/slee981
+  icon: fab fa-github

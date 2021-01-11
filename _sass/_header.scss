@@ -3,11 +3,8 @@
     padding-right: 10%;  
 }
 
-.navbar-brand-img {
-    transition: all 0.5s ease-in-out;
-}
-
 .navbar-brand {
+    transition: all 0.5s ease-in-out;
     color: var(--site-primary) !important;
 }
 
@@ -16,11 +13,13 @@
 }
 
 .scrolling {
+    font-size: var(--brand-font-size-small);
     width: calc(var(--navbar-img-width) * 0.90);
     height: calc(var(--navbar-img-height) * 0.90);
 }
 
 .top {
+    font-size: var(--brand-font-size);
     width: var(--navbar-img-width);
     height: var(--navbar-img-height);
 }

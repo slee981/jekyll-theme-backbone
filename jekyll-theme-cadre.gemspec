@@ -2,11 +2,11 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "jekyll-theme-cadre"
-  spec.version       = "0.1.9"
+  spec.version       = "0.1.10"
   spec.authors       = ["Stephen Lee"]
   spec.email         = ["smlee.981@gmail.com"]
 
-  spec.summary       = "A minimalist Jekyll theme for bloggers with Bootstrap and KaTex"
+  spec.summary       = "A responsive, modern, Jekyll theme for bloggers with Bootstrap styling and KaTex support."
   spec.homepage      = "https://github.com/slee981/jekyll-theme-cadre"
   spec.license       = "MIT"
 

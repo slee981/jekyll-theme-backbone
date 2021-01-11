@@ -1,0 +1,6 @@
+- name: Home 
+  link: index.html
+- name: Categories 
+  link: categories.html 
+- name: Archive
+  link: archive.html 
