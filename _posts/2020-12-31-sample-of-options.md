@@ -16,6 +16,9 @@ There should be whitespace between paragraphs.
 
 There should be whitespace between paragraphs. We recommend including a README, or a file with information about your project.
 
+# Header 1
+This is ignored in the table of contents. This is because the post's title should be the only `<h1>` in the post.
+
 ## Header 2
 
 > This is a blockquote following a header.
