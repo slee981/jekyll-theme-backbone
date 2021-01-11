@@ -95,13 +95,40 @@ The main usage of this theme is described in detail below. If you find the docum
 | Variable | Type | Default | Specification |
 | -------- | ---- | ------- | ------------- |
 | `title` | String | --- | The title of the website |
+| `description` | String | --- | A description of you or the blog. Alias for "about" |
 | `about` | String | --- | About you or about the blog |
-| `author.name` | String | --- | The name of the website author |
-| `author.url` | String | --- | A URL of the website author |
-| `date_format` | String | `%-d %b %Y` | The [date format](http://alanwsmith.com/jekyll-liquid-date-formatting-examples) which is used in many places on the website |
-| `tags_path` | String | --- | A path to the archive-by-tags page; It is used by tags on each post |
+| `about_img` | Filepath | --- | Image to display in the "About" section |
+| `navbar_img` | Filepath | --- | Image to display in the top navbar |
+| `favicon_img` | Filepath | --- | Image to display in browser tab |
+| `paginate` | Number | --- | How many posts to show on the home page |
+| `exclude_powered_by` | Boolean | false | Remove the "powered by..." credit in the footer |
 | `google_analytics` | String | --- | Google Analytics tracking ID |
 | `disqus` | String | --- | Disqus short name |
+
+Additionally, `Cadre` is designed for flexibility. To change your `css` settings, create a file called `_sass/_variables.scss` and override the following: 
+
+```scss
+/* ./_sass/_variables.scss */
+
+// navbar logo image size
+--navbar-img-height: 45px; 
+--navbar-img-width: 275px; 
+
+// colors
+--site-primary: rgb(253, 194, 0);
+--site-secondary: rgb(185, 2, 2);
+--site-tertiary: var(--oc-gray-6);
+--tan: rgb(255, 246, 231);
+--beige: rgb(255, 248, 238);
+
+--nav-bg: var(--oc-gray-1);
+--body-bg: var(--oc-gray-0);
+--footer-bg: var(--oc-gray-1);
+--card-bg: var(--oc-white);
+--code-bg: var(--oc-gray-1);
+--post-bg: var(--oc-white);
+--math-bg: var(--beige);
+```
 
 ### Post Configuration
 
@@ -127,18 +154,23 @@ layout: home
 
 ### Categories
 
-You can create a categories page for your blog by setting `layout: categories` in a file called `categories.html`.
+By default, `Cadre` comes built in with pages for `categories.html` and `archive.html`. To use: 
 
-```html
-<!-- ./categories.html -->
----
-layout: categories
----
-```
+1. Create a `_data/navigation.yml` file with the contents shown below. 
+2. Denote categories in your post with metadata in the header: 
+    ```html
+    ---
+    <!-- ./_posts/2021-01-08-example-post.md -->
+
+    layout: post 
+    categories: [General, Tools]
+    ...
+    ---
+    ```
 
 ### Navigation
 
-You can configure the navigation of the website by creating a file `_data/navigation.yml` in your repository, and put some data such as below into it.
+You can configure the navigation of the website by creating a file `_data/navigation.yml` in your repository, and put some data such as below into it. By default, this theme comes with pages for `catgories.html` and `archive.html`.
 
 ```yml
 # _data/navigation.yml
@@ -146,6 +178,8 @@ You can configure the navigation of the website by creating a file `_data/naviga
   link: index.html
 - name: Categories 
   link: categories.html 
+- name: Archive
+  link: archive.html 
 ```
 
 ### Social Links
@@ -178,7 +212,9 @@ type: years
 ---
 ```
 
-Similarly, if you want to archive posts by categories or tags, you can set the `type` property as `categories` or `tags`.
+This is created for you by default for years (called `archive.html`) and for categories (called `categories.html`). 
+
+Similarly, if you want to archive posts by categories or tags, you can set the `type` property as `tags`.
 
 ### Custom Head
 
@@ -186,6 +222,7 @@ You can insert custom code easily into the head by  creating a file `_includes/c
 
 ```html
 <!-- ./_includes/custom-head.html -->
+
 <script>
   console.log("This is my custom head");
 </script>
