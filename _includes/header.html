@@ -3,11 +3,11 @@
   <!-- BRAND LOGO OR NAME -->
   <a class="navbar-brand top" id="site-logo" href="{{ '/' | relative_url }}">
     {% if site.navbar_img %}
-      <img src="{{ site.navbar_img | relative_url }}" alt="">
+      <img class="navbar-brand-img" src="{{ site.navbar_img | relative_url }}" alt="">
     {% elsif site.title %}
       {{ site.title }}
     {% else %}
-      Cadre
+      <img class="navbar-brand-img" src="{{ 'assets/images/Cadre.png' | relative_url }}" alt="">
     {% endif %}
   </a>
   
