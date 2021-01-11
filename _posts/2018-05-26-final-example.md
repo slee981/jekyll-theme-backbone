@@ -2,7 +2,7 @@
 layout: post
 title: Final Example to Show Pagination 
 author: Stephen Lee
-categories: [general, tutorial]
+categories: [general, cadre tutorial]
 toc: true
 katex: true
 ---
