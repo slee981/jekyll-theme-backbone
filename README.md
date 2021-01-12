@@ -224,17 +224,17 @@ The `icon` property means a [Font Awesome](https://fontawesome.com/) class, and 
 You can easily override the default settings. To override variables, create three new fies (and the corresponding folders, as needed) 
 
 ```bash
-$ mkdir _scss _scss/cadre assets assets/css
+$ mkdir _sass _sass/cadre assets assets/css
 $
-$ touch _scss/cadre/custom-variables.scss 
-$ touch _scss/cadre/custom-styles.scss
+$ touch _sass/cadre/custom-variables.scss 
+$ touch _sass/cadre/custom-styles.scss
 $ touch assets/css/style.scss 
 ```
 
 In your favorite text editor, you can change any of the following default values: 
 
 ```scss
-/* in "./_scss/cadre/custom-variables.scss" */
+/* in "./_sass/cadre/custom-variables.scss" */
 
 // base nav logo image size
 $navbar-img-height: 45px; 
@@ -263,7 +263,7 @@ $post-bg: var(--oc-white);         // actual post background color
 And so on. See code for more complete options. Similarly you can override any class or id settings as follows:  
 
 ```scss
-/* in "./_scss/cadre/custom-styles.scss" */
+/* in "./_sass/cadre/custom-styles.scss" */
 
 .navbar {
   // your custom navbar style
