@@ -12,9 +12,10 @@ Gem::Specification.new do |spec|
 
   spec.files         = `git ls-files -z`.split("\x0").select { |f| f.match(%r!^(assets|_layouts|_includes|_plugins|_sass|LICENSE|README)!i) }
 
-  # these two are not compatible 
+  # these two do not seem to be compatible 
   # spec.add_runtime_dependency "jekyll", "~> 4.2.0"
   # spec.add_runtime_dependency "github-pages", "~> 209"
+  spec.add_runtime_dependency "kramdown-parser-gfm", '~> 1.1'
   spec.add_runtime_dependency 'jekyll-paginate', '~> 1.1'
   spec.add_runtime_dependency 'jekyll-feed', '~> 0.15.1'
   spec.add_runtime_dependency 'jekyll-seo-tag', '~> 2.6'
