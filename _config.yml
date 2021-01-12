@@ -28,7 +28,6 @@ baseurl: /jekyll-theme-cadre
 about: Cadre is a responsive, modern Jekyll theme for bloggers. This theme is designed to come with good defaults including an archive and categories page "out of the box". 
 # about_img: "/assets/images/SparklingCorrelation-full.png"
 navbar_img: "/assets/images/Cadre.png"
-favicon_img: "/assets/images/Cadre.png"
 paginate: 3
 exclude_powered_by: false
 
