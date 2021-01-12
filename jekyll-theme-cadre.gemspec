@@ -2,7 +2,6 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "jekyll-theme-cadre"
-  # spec.version       = "0.1.14"
   spec.version       = `cat version.txt` 
   spec.authors       = ["Stephen Lee"]
   spec.email         = ["smlee.981@gmail.com"]
@@ -13,8 +12,9 @@ Gem::Specification.new do |spec|
 
   spec.files         = `git ls-files -z`.split("\x0").select { |f| f.match(%r!^(assets|_layouts|_includes|_plugins|_sass|LICENSE|README)!i) }
 
+  # these two are not compatible 
   # spec.add_runtime_dependency "jekyll", "~> 4.2.0"
-  spec.add_runtime_dependency "github-pages", "~> 209"
+  # spec.add_runtime_dependency "github-pages", "~> 209"
   spec.add_runtime_dependency 'jekyll-paginate', '~> 1.1'
   spec.add_runtime_dependency 'jekyll-feed', '~> 0.15.1'
   spec.add_runtime_dependency 'jekyll-seo-tag', '~> 2.6'
