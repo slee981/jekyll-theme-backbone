@@ -6,7 +6,7 @@
 .toc-div {
   position: -webkit-sticky !important;
   position: sticky !important;
-  top: calc(var(--top-nav-space) + var(--sticky-div-pad)) !important; 
+  top: calc(#{$top-nav-space} + #{$sticky-div-pad}) !important; 
 }
 
 .toc,
@@ -21,19 +21,19 @@
   overflow-y: auto;
 
   a.active {
-    color: var(--site-secondary);
+    color: $site-secondary;
   }
 
   a {
     display: block;
     text-decoration: none;
 
-    color: var(--toc-text-color);
+    color: $toc-text-color;
 
     &:hover,
     &:focus {
       font-weight: bold;
-      color: var(--link-hover-color) !important;
+      color: $link-hover-color !important;
     }
   }
 

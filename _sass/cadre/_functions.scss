@@ -3,7 +3,7 @@
 
   &:hover,
   &:focus {
-    color: var(--link-color);
+    color: $link-color;
     text-decoration: none;
   }
 }

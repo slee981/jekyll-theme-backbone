@@ -34,6 +34,7 @@ $xxl: 1400px;
 
 // Import pre-styling-overrides hook and style-partials.
 @import
+  "cadre/variables",        // Default settings
   "cadre/custom-variables", // Hook to override predefined variables.
   "cadre/main",             // Loads specific styles
   "cadre/custom-styles"     // Hook to override predefined styles.

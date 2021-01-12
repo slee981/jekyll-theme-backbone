@@ -1,6 +1,6 @@
 .post {
     padding-right: 25px;
-    background-color: var(--post-bg);
+    background-color: $post-bg;
 }
 
 .post-body {
@@ -12,7 +12,7 @@
 }
 
 .post-metadata {
-    color: var(--metadata-color);
+    color: $metadata-color;
 }
 
 .footnotes {

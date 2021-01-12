@@ -1,5 +1,5 @@
 .katex-display {
-  background-color: var(--math-bg);
+  background-color: $math-bg;
   overflow-x: auto;
   overflow-y: visible;
 }
@@ -9,7 +9,7 @@
 }
 
 .highlight {
-  border-radius: var(--border-radius);
+  border-radius: $border-radius;
 }
 
 .highlighter-rouge {
@@ -36,27 +36,27 @@
     vertical-align: top;
     user-select: none;
     opacity: .25;
-    padding-right: var(--spacer);
+    padding-right: $spacer;
   }
 }
 
 code,
 pre {
-  font-family: var(--code-font);
-  background-color: var(--code-bg);
+  font-family: $code-font;
+  background-color: $code-bg;
 }
 
 code {
   padding: .1em .25em;
-  border-radius: var(--border-radius);
-  background-color: var(--code-bg);
+  border-radius: $border-radius;
+  background-color: $code-bg;
 }
 
 pre {
   display: block;
   overflow: auto;
-  padding: var(--spacer);
-  margin: var(--spacer) 0;
+  padding: $spacer;
+  margin: $spacer 0;
 
   code {
     padding: 0;

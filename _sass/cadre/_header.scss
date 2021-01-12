@@ -1,56 +1,57 @@
 .navbar {
-    padding-left: 10%;  
-    padding-right: 10%;  
+  padding-left: 10%;
+  padding-right: 10%;
 }
 
 .navbar-brand {
-    color: var(--site-primary) !important;
+  color: $site-primary !important;
 }
 
 .navbar-brand img {
-    margin-top: -10px;
-    transition: all 0.25s ease-in-out;
+  margin-top: -10px;
+  transition: all 0.25s ease-in-out;
 }
 
 a.navbar-brand {
-    transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
 }
 
-
 .scrolling {
-    font-size: var(--brand-font-size-small);
+  font-size: $brand-font-size-small;
 }
 
 .top {
-    font-size: var(--brand-font-size);
+  font-size: $brand-font-size;
 }
 
 .scrolling img {
-    width: calc(var(--navbar-img-width) * 0.90);
-    height: calc(var(--navbar-img-height) * 0.90);
+  // width: unquote("#{$navbar-img-width} * 0.9"px);
+  // height: unquote("#{$navbar-img-height} * 0.9"px);
+  width: calc(#{$navbar-img-width} * 0.9);
+  height: calc(#{$navbar-img-height} * 0.9);
 }
 
 .top img {
-    width: var(--navbar-img-width);
-    height: var(--navbar-img-height);
+  width: $navbar-img-width;
+  height: $navbar-img-height;
 }
 
 a.nav-link {
-    color: var(--site-tertiary);
+  color: $site-tertiary;
 }
 
 #menu {
-    background-color: var(--nav-bg);
+  background-color: $nav-bg;
 }
 
 @media only screen and (max-width: $md) {
-    .scrolling {
-        width: calc(var(--navbar-img-width) * 0.55);
-        height: calc(var(--navbar-img-height) * 0.55);
-    }
+  .scrolling {
+    width: calc(#{$navbar-img-width} * 0.55);
+    height: calc(#{$navbar-img-height} * 0.55);
+  }
 
-    .top {
-        width: calc(var(--navbar-img-width) * 0.65);
-        height: calc(var(--navbar-img-height) * 0.65);
-    }  
+  .top {
+    width: calc(#{$navbar-img-width} * 0.65);
+    height: calc(#{$navbar-img-height} * 0.65);
+  }
 }

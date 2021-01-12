@@ -1,30 +1,31 @@
 body {
-  background-color: var(--body-bg) !important;
+  background-color: $body-bg !important;
 }
 
 a {
-  color: var(--link-color);
+  color: $link-color;
   text-decoration: none !important;
-  &:hover, 
+
+  &:hover,
   &:focus {
-    color: var(--link-hover-color) !important;
+    color: $link-hover-color !important;
     font-weight: bold !important;
     transition: all 0.25s ease-in-out;
   }
 }
 
 h1 {
-  color: var(--h1-color);
+  color: $h1-color;
   padding: 10px 0;
 }
 
 h2 {
-  color: var(--h2-color);
+  color: $h2-color;
   padding: 7px 0;
 }
 
 h3 {
-  color: var(--h3-color);
+  color: $h3-color;
   padding: 5px 0;
 }
 
@@ -34,18 +35,18 @@ img {
 }
 
 .fa-hover {
-  &:hover, 
+  &:hover,
   &:focus {
     transform: scale(1.1) !important;
   }
 }
 
 .card {
-  background-color: var(--card-bg) !important;
+  background-color: $card-bg !important;
 }
 
 .card-text a {
-  color: var(--link-color);
+  color: $link-color;
 }
 
 p.card-list {
@@ -59,8 +60,8 @@ p.card-list {
 }
 
 .container {
-  margin-top: var(--top-nav-space);
-  padding-top: var(--top-nav-space);
+  margin-top: $top-nav-space;
+  padding-top: $top-nav-space;
 }
 
 .list-unstyled {
@@ -81,13 +82,13 @@ p.card-list {
 .sticky-div {
   position: -webkit-sticky !important;
   position: sticky !important;
-  top: calc(var(--top-nav-space) + var(--sticky-div-pad)) !important; 
+  top: calc(#{$top-nav-space} + #{$sticky-div-pad}) !important;
 }
 
 a.jump-to-anchor {
   display: block;
   position: relative;
-  top: calc(-1 * (var(--top-nav-space) + var(--sticky-div-pad)));
+  top: -1 * $top-nav-space + $sticky-div-pad;
   visibility: hidden;
 }
 
@@ -97,28 +98,23 @@ a.jump-to-anchor {
 
 .category-tags a {
   display: inline-block;
-  border: 1px solid var(--site-tertiary);
+  border: 1px solid $site-tertiary;
   border-radius: 999em;
   line-height: 24px;
   font-size: 12px;
   padding: 5px 10px;
-  &:hover, 
+
+  &:hover,
   &:focus {
-    border-color: var(--site-primary);
-    // .taxonomy-description {
-    //   font-weight: bold;
-    //   border-color: var(--site-primary);
-    //   background-color: var-bg);bg
-    //   color: var(--site-primary);
-    // }
+    border-color: $site-primary;
   }
 }
 
 .taxonomy-count {
   display: inline-block;
-  border: 1px solid var(--site-tertiary);
-  background-color: var(--site-tertiary);
-  color: var(--body-bg);
+  border: 1px solid $site-tertiary;
+  background-color: $site-tertiary;
+  color: $body-bg;
   border-radius: 999em;
   line-height: 24px;
   font-size: 12px;
@@ -126,14 +122,14 @@ a.jump-to-anchor {
 }
 
 .active {
-    color: var(--site-secondary) !important; 
-    font-weight: bold !important;
+  color: $site-secondary !important;
+  font-weight: bold !important;
 }
 
 abbr[title] {
-  border-bottom: none; 
-  text-decoration: underline; 
-  text-decoration: underline dotted; 
+  border-bottom: none;
+  text-decoration: underline;
+  text-decoration: underline dotted;
 }
 
 sub,
