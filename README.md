@@ -40,9 +40,12 @@ Support for code and mathematical typesetting, table of contents with highlighte
   - [Global Configuration](#global-configuration)
   - [Post Configuration](#post-configuration)
   - [Homepage](#homepage)
+  - [Archive](#archive)
+  - [Categories](#categories)
   - [Navigation](#navigation)
   - [Social Links](#social-links)
   - [Archive](#archive)
+  - [Custom Styling](#custom-styling)
   - [Custom Head](#custom-head)
 - [Contributing](#contributing)
 - [Development](#development)
@@ -78,7 +81,8 @@ Or install it yourself as:
 $ gem install jekyll-theme-cadre
 ```
 
-If you want to use this theme on GitHub Pages, you can do that via `jekyll-remote-theme`:
+### Github Pages
+If you want to use this theme on GitHub Pages, you can do that via `jekyll-remote-theme`.
 
 1. Import `jekyll-remote-theme` in your `Gemfile`:
 
@@ -140,20 +144,6 @@ layout: home
 ---
 ```
 
-### Navigation
-
-You can configure the navigation of the website by creating a file `_data/navigation.yml` in your repository, and put some data such as below into it. By default, this theme comes with pages for `catgories.html` and `archive.html`.
-
-```yml
-# _data/navigation.yml
-- name: Home 
-  link: index.html
-- name: Categories 
-  link: categories.html 
-- name: Archive
-  link: archive.html 
-```
-
 ### Archive
 
 Cadre supports built-in archive pages. If you want to archive posts by years, you can create a page named `./archive.html` and put the following code in it: 
@@ -196,6 +186,20 @@ By default, `Cadre` supports category tracking and searching. **It is highly rec
 
 Similarly, if you want to archive posts by tags, you can set the `type` property as `tags`.
 
+### Navigation
+
+You can configure the navigation of the website by creating a file `_data/navigation.yml` in your repository, and put some data such as below into it. By default, this theme comes with pages for `catgories.html` and `archive.html`.
+
+```yml
+# _data/navigation.yml
+- name: Home 
+  link: index.html
+- name: Categories 
+  link: categories.html 
+- name: Archive
+  link: archive.html 
+```
+
 ### Social Links
 
 Scaffold allows you to show social links on the website, all you need to do is creating a file `_data/social.yml`, for example,
@@ -214,6 +218,72 @@ Scaffold allows you to show social links on the website, all you need to do is c
 ```
 
 The `icon` property means a [Font Awesome](https://fontawesome.com/) class, and you can select any one you like.
+
+### Custom Styling
+
+You can easily override the default settings. To override variables, create three new fies (and the corresponding folders, as needed) 
+
+```bash
+$ mkdir _scss _scss/cadre assets assets/css
+$
+$ touch _scss/cadre/custom-variables.scss 
+$ touch _scss/cadre/custom-styles.scss
+$ touch assets/css/style.scss 
+```
+
+In your favorite text editor, you can change any of the following default values: 
+
+```scss
+/* in "./_scss/cadre/custom-variables.scss" */
+
+// base nav logo image size
+$navbar-img-height: 45px; 
+$navbar-img-width: 150px; 
+
+// colors
+$tan: rgb(255, 246, 231);
+$beige: rgb(255, 248, 238);
+$cream: rgb(248, 247, 245);
+
+$site-primary: rgb(214, 12, 12);   // primary site color
+$site-secondary: rgb(119, 0, 0);   // secondary site color
+$site-tertiary: var(--oc-gray-6);  // from open-colors.scss
+
+$body-bg: $cream;                  // main background color
+$math-bg: $beige;                  // katex math background color
+$nav-bg: var(--oc-white);          // navbar background color
+$footer-bg: var(--oc-gray-1);      // footer background color
+$card-bg: var(--oc-white);         // card background color
+$code-bg: var(--oc-gray-1);        // code background color
+$post-bg: var(--oc-white);         // actual post background color
+
+...
+```
+
+And so on. See code for more complete options. Similarly you can override any class or id settings as follows:  
+
+```scss
+/* in "./_scss/cadre/custom-styles.scss" */
+
+.navbar {
+  // your custom navbar style
+  padding: 5% 15%; 
+}
+```
+
+Finally, we reload all of the style as follows in your `assets/css/style.scss` file:
+
+```scss
+// in "./assets/css/style.scss"
+---
+---
+
+@import "cadre/initialize";
+```
+
+The front matter dashes at the very beginning can remain empty. The directive to initialize will automatically load your custom overrides when available.
+
+Your website should now reflect these changes.
 
 ### Custom Head
 
