@@ -28,6 +28,11 @@ h3 {
   padding: 5px 0;
 }
 
+img {
+  max-height: 100%;
+  max-width: 100%;
+}
+
 .fa-hover {
   &:hover, 
   &:focus {

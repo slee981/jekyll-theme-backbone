@@ -2,7 +2,21 @@
 
 Cadre is a responsive, modern Jekyll theme for bloggers. This theme is designed to come with good defaults including an archive and categories page. 
 
-This is a fork of the excellent [scaffold theme](https://github.com/sziv2p/jekyll-theme-scaffold), redesigned with Bootstrap and added KaTex support for improved mathematical typesetting.
+This is a fork of the excellent [scaffold theme](https://github.com/sziv2p/jekyll-theme-scaffold), completely redesigned with Bootstrap, and added KaTex support for improved mathematical typesetting.
+
+## Screenshots
+
+#### Homepage
+![Homepage](screenshot-home.png)
+
+#### Categories 
+Just add a `./categories.html` file in the root of your directory with yml as specified below!
+
+![Categories](screenshot-categories.png)
+
+#### Post
+Support for code and mathematical typesetting, table of contents with highlighted scroll, and more. 
+![Post](screenshot-post.png)
 
 ## Features (Not a Complete List) <!-- omit in toc -->
 
