@@ -7,16 +7,16 @@ This is a fork of the excellent [scaffold theme](https://github.com/sziv2p/jekyl
 ## Screenshots
 
 #### Homepage
-![Homepage](screenshot-home.png)
+![Homepage](https://stephenlee.info/jekyll-theme-cadre/assets/images/screenshot-home.png)
 
 #### Categories 
 Just add a `./categories.html` file in the root of your directory with yml as specified below!
 
-![Categories](screenshot-categories.png)
+![Categories](https://stephenlee.info/jekyll-theme-cadre/assets/images/screenshot-categories.png)
 
 #### Post
 Support for code and mathematical typesetting, table of contents with highlighted scroll, and more. 
-![Post](screenshot-post.png)
+![Post](https://stephenlee.info/jekyll-theme-cadre/assets/images/screenshot-post.png)
 
 ## Features (Not a Complete List) <!-- omit in toc -->
 
