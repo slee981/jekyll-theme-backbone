@@ -3,14 +3,18 @@
   <div class="card-body">
 
     <h3 class="card-title text-center">Recent Posts</h3>
-    <ul class="list-unstyled">
+  </div>
+    <ul class="list-group list-group-flush">
       {% for post in site.posts limit:3 %}
-        <li class="card-text text-center">
+        <li class="list-group-item">
+          <time datetime="{{ page.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d, %Y" }}</time> 
+          &raquo;
           <a class="card-link" href="{{ post.url | relative_url }}">{{ post.title }}</a>
         </li>
       {% endfor %}
     </ul>
 
+  <div class="card-body">
     {% if site.categories.size > 0 %}
       <h3 class="card-title text-center">Categories</h3>
       <div class="category-tags d-flex flex-wrap justify-content-center px-5">
