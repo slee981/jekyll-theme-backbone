@@ -54,4 +54,14 @@ a.nav-link {
     width: calc(#{$navbar-img-width} * 0.65);
     height: calc(#{$navbar-img-height} * 0.65);
   }
+
+  // override the max-height setting to ensure 
+  // image scales appropriately 
+  .scrolling img {
+    max-height: none;
+  }
+
+  .top img {
+    max-height: none;
+  }
 }
