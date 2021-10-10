@@ -1,0 +1,42 @@
+<!-- Search -->
+<div class="card sticky-div mt-2">
+    
+    <div class="card-body">
+        <h3 class="card-title text-center">Search</h3>
+        <div class="searchbar search-container sans">
+            <i aria-hidden="true" class="fa fa-search"></i>
+            <input autocomplete="off" id="search-input" oninput="changeResultContainerDisp(this.value)" placeholder="Search cards..." type="text"/>
+            <label for="search-input"></label>
+            <ul id="results-container"></ul>
+        </div>
+    </div>
+</div>
+
+<script src="{{ 'assets/js/simple-jekyll-search.min.js' | relative_url }}"></script>
+<script>
+    function changeResultContainerDisp(val) {
+        if (val) {
+            document.getElementById("results-container").style.display = "block";
+            document.getElementById("search-input").addEventListener('blur', function () {
+                document.addEventListener('click', function (event) {
+                    var isClickInside = document.getElementById("results-container").contains(event
+                        .target);
+                    if (!isClickInside) {
+                        document.getElementById("results-container").style.display = "none";
+                    }
+                })
+            })
+        } else {
+            document.getElementById("results-container").style.display = "none";
+        }
+    }
+    var sjs = SimpleJekyllSearch({
+        searchInput: document.getElementById('search-input'),
+        resultsContainer: document.getElementById('results-container'),
+        json: "{{ 'search.json' | relative_url }}",
+        searchResultTemplate: '<li class="search_res" style="list-style: none;"><a href="{{ site.url }}{url}" color: #555555;"><p><strong> ></strong> {title}</p></a></li>',
+        noResultsText: 'No results found. Try another search.',
+        fuzzy: false,
+        limit: 5
+    })
+</script>
