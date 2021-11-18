@@ -1,0 +1,16 @@
+{% if page.categories.size > 0 %}
+  {% assign ordered_categories = page.categories | sort %}
+  <div class="category-tags d-flex flex-wrap justify-content-center">
+    {% for category in ordered_categories %}
+      {% capture capitalized_category %}
+        {% for word in category %}
+          {{ word | capitalize }}
+        {% endfor %}
+      {% endcapture %}
+      {% assign categories_link = site.url | append: site.baseurl | append: '/categories.html' %}
+      <a class="card-link my-2 px-3 py-2" href="{{ categories_link }}#{{ category | slugify }}">
+        <span>{{ capitalized_category }}</span>
+      </a>
+    {% endfor %}
+  </div>
+{% endif %}
