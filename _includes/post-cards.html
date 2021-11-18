@@ -10,11 +10,7 @@
             <h3 class="card-title text-center">{{ post.title }}</h3>
 
             <p class="card-text text-center">
-                {% if post.description %}
-                    {{ post.description }}
-                {% else %}
-                    {{ post.content | strip_html | truncatewords: 50 }}
-                {% endif %}
+                {{ post.content | strip_html | truncatewords: 50 }}
             </p>
 
             <p class="card-text text-center read-more">
