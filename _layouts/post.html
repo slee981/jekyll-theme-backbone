@@ -12,6 +12,7 @@ layout: default
   <div class="row post-header">
     <div class="col">
       <h1 class="post-title text-center">{{ page.title }}</h1>
+      <h5 class="post-title text-center">{{ page.description }}</h5>
       <div class="post-meta text-center">
 
         {% if page.author %}
@@ -33,6 +34,17 @@ layout: default
           <time class="post-metadata" datetime="{{ mdate }}" itemprop="dateModified">
             {{ mdate | date: date_format }}
           </time>
+        
+        <!-- SUGGEST AN EDIT -->
+        {% if site.repository and site.default_branch %}
+          |{% assign edit_link = "https://github.com/" | append: site.repository | append: "/edit/" | append: site.default_branch | append: "/" | append: page.path %}
+          <a href="{{edit_link}}"><i class="fas fa-edit"></i> Suggest an edit</a>
+          <br>
+        {% endif %}
+
+        <!-- POST CATEGORIES -->
+        {% include post_categories.html %}
+        
         {% endif %}
       </div>
     </div>
