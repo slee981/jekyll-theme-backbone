@@ -12,15 +12,35 @@ layout: default
   <div class="row post-header">
     <div class="col">
       <h1 class="post-title text-center">{{ page.title }}</h1>
+      <h5 class="post-title text-center">{{ page.description }}</h5>
       <div class="post-meta text-center">
 
-        {% if page.author %}
+        <!-- AUTHORS AND EDITORS -->
+        {% if page.author.size > 1 or page.editor.size > 0 %}
           {% for author in page.author %}
-            <span class="post-metadata" itemprop="author" itemscope itemtype="http://schema.org/Person">
-              {{ author }} -
-            </span>
-            {% if forloop.last == false %}, {% endif %}
+            {% if page.editor.size == 0 %}
+              {% if forloop.last == false or forloop.first == true %}
+                <span class="post-metadata" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                  {{ author | append: ", " }}
+                </span>
+              {% endif %}
+            {% else %}
+              <span class="post-metadata" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                {{ author | append: ", " }}
+              </span>
+            {% endif %}
           {% endfor %}
+          {% if page.editor.size > 0 %}
+            <span class="post-metadata" itemprop="author" itemscope itemtype="http://schema.org/Person">
+              edited by
+            </span>
+            {% for editor in page.editor %}
+              <span class="post-metadata" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                {{ editor }}
+              </span>
+              {% if forloop.last == false %}{{ sep }}{% endif %}
+            {% endfor %}
+          {% endif %} -
         {% endif %}
 
         {% assign date_format = site.date_format | default: "%b %d, %Y" %}
@@ -34,6 +54,25 @@ layout: default
             {{ mdate | date: date_format }}
           </time>
         {% endif %}
+        
+        <!-- POST CATEGORIES DISPLAYED AS CATEGORY TAGS -->
+        {% if page.categories.size > 0 %}
+          {% assign ordered_categories = page.categories | sort %}
+          <div class="category-tags d-flex flex-wrap justify-content-center">
+            {% for category in ordered_categories %}
+              {% capture capitalized_category %}
+                {% for word in category %}
+                  {{ word | capitalize }}
+                {% endfor %}
+              {% endcapture %}
+              {% assign categories_link = site.url | append: site.baseurl | append: '/categories.html' %}
+              <a class="card-link my-2 px-3 py-2" href="{{ categories_link }}#{{ category | slugify }}">
+                <span>{{ capitalized_category }}</span>
+              </a>
+            {% endfor %}
+          </div>
+        {% endif %}
+        
       </div>
     </div>
   </div>
