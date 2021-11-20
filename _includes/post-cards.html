@@ -8,6 +8,9 @@
     <div class="card my-2 mx-3">
         <div class="card-body p-5">
             <h3 class="card-title text-center">{{ post.title }}</h3>
+            {% if post.description %}
+            <h6 class="card-title text-center">{{ post.description }}</h6>
+            {% endif %}
 
             <p class="card-text text-center">
                 {{ post.content | strip_html | truncatewords: 50 }}
@@ -21,4 +24,3 @@
         </div>
     </div>
 {% endfor %}
-
