@@ -1,7 +1,8 @@
 ---
 layout: post
 title: Sample of Post Options
-author: Songzi Vong, updated by Stephen Lee
+author: Songzi Vong
+editor: Stephen Lee
 categories: [general, tutorial, jekyll]
 toc: true
 katex: true
