@@ -15,13 +15,31 @@ layout: default
       <h5 class="post-title text-center">{{ page.description }}</h5>
       <div class="post-meta text-center">
 
-        {% if page.author %}
+        {% if page.author.size > 1 or page.editor.size > 0 %}
           {% for author in page.author %}
-            <span class="post-metadata" itemprop="author" itemscope itemtype="http://schema.org/Person">
-              {{ author }} -
-            </span>
-            {% if forloop.last == false %}, {% endif %}
+            {% if page.editor.size == 0 %}
+              {% if forloop.last == false or forloop.first == true %}
+                <span class="post-metadata" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                  {{ author | append: ", " }}
+                </span>
+              {% endif %}
+            {% else %}
+              <span class="post-metadata" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                {{ author | append: ", " }}
+              </span>
+            {% endif %}
           {% endfor %}
+          {% if page.editor.size > 0 %}
+            <span class="post-metadata" itemprop="author" itemscope itemtype="http://schema.org/Person">
+              edited by
+            </span>
+            {% for editor in page.editor %}
+              <span class="post-metadata" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                {{ editor }}
+              </span>
+              {% if forloop.last == false %}{{ sep }}{% endif %}
+            {% endfor %}
+          {% endif %} -
         {% endif %}
 
         {% assign date_format = site.date_format | default: "%b %d, %Y" %}
