@@ -40,7 +40,10 @@ layout: default
               </span>
               {% if forloop.last == false %}{{ sep }}{% endif %}
             {% endfor %}
-          {% endif %} -
+          {% endif %}
+          <span class="post-metadata" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            -
+          </span>
         {% endif %}
 
         {% assign date_format = site.date_format | default: "%b %d, %Y" %}
