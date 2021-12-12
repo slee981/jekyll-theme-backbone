@@ -60,17 +60,17 @@ layout: default
         
         <!-- POST CATEGORIES DISPLAYED AS CATEGORY TAGS -->
         {% if page.categories.size > 0 %}
-          {% assign ordered_categories = page.categories | sort %}
           <div class="category-tags d-flex flex-wrap justify-content-center">
-            {% for category in ordered_categories %}
-              {% capture capitalized_category %}
-                {% for word in category %}
-                  {{ word | capitalize }}
-                {% endfor %}
+            {% for category in page.categories %}
+              {% assign anchor_url = site.url | append: site.baseurl | append: '/categories.html' %}
+              {% assign category_words = category | split: ' ' %}
+              {% capture capitalized_category_name %}
+              {% for word in category_words %}
+                {{ word | capitalize }}
+              {% endfor %}
               {% endcapture %}
-              {% assign categories_link = site.url | append: site.baseurl | append: '/categories.html' %}
-              <a class="card-link my-2 px-3 py-2" href="{{ categories_link }}#{{ category | slugify }}">
-                <span>{{ capitalized_category }}</span>
+              <a class="card-link my-2 px-3 py-2" href="{{ anchor_url }}#{{ category | slugify }}">
+                {{ capitalized_category_name }}
               </a>
             {% endfor %}
           </div>
